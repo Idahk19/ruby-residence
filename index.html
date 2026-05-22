@@ -15,11 +15,22 @@
 
          <h1 class="text-2xl font-bold tracking-widest uppercase">Ruby Residence</h1>
          <ul class="flex gap-6 text-sm">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
          </ul>
-        <button class="bg-gray-900 text-white px-4 py-1 rounded hover:bg-yellow-700">Sign up</button>
+        <div class="flex gap-4">
+        <a href="tenantlogin.html">
+        <button class="bg-gray-900 font-semibold text-white px-2 py-2 rounded hover:bg-yellow-700">
+          Admin Login
+        </button>
+        </a>
+        <a href="tenantlogin.html">
+        <button class="bg-white text-black font-semibold px-2 py-2 rounded hover:bg-gray-300">
+          Tenant Login 
+        </button>
+        </a>
+      </div>
         </nav>
      </header>
 <!-- HERO SECTION -->
@@ -41,19 +52,7 @@
       <p class="text-3xl font-bold mb-6">
         Get Started
       </p>
-
-      <div class="flex gap-4">
-        <a href="tenantlogin.html">
-        <button class="bg-gray-900 font-semibold text-white px-2 py-2 rounded hover:bg-yellow-700">
-          Admin Login
-        </button>
-        </a>
-        <a href="tenantlogin.html">
-        <button class="bg-white text-black font-semibold px-2 py-2 rounded hover:bg-gray-300">
-          Tenant Login 
-        </button>
-        </a>
-      </div>
+      <button class="bg-gray-900 text-white px-6 py-2 rounded hover:bg-yellow-700">Sign up</button>
 
     </div>
 
@@ -101,7 +100,7 @@
 
   <div class="text-center mb-6">
     <h2 class="text-2xl font-bold text-gray-900">
-      Features of Rubyresidence
+      Features of Ruby Residence
     </h2>
     <p class="text-gray-600">
       Everything you need to manage tenants, rent, and rooms efficiently.
@@ -114,7 +113,7 @@
     <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
       <h3 class="text-xl font-semibold mb-2"><i class="fa-solid fa-money-bill"></i>Billing System</h3>
       <p class="text-gray-600 text-sm">
-        View and manage rent and utility bills easily and clearly.
+        Rent and utility bills are recorded and updated for each tenant.
       </p>
     </div>
 
@@ -122,7 +121,7 @@
     <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
       <h3 class="text-xl font-semibold mb-2"><i class="fa-regular fa-house"></i> Room Management</h3>
       <p class="text-gray-600 text-sm">
-        Track available and occupied rooms in real time.
+        Rooms are marked as occupied or available within the residence system.
       </p>
     </div>
 
@@ -130,7 +129,7 @@
     <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
       <h3 class="text-xl font-semibold mb-2"><i class="fa-solid fa-bullhorn"></i> Notices</h3>
       <p class="text-gray-600 text-sm">
-        Send and receive important apartment announcements.
+      Management posts updates that are visible to all tenants.
       </p>
     </div>
 
@@ -138,7 +137,7 @@
     <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
       <h3 class="text-xl font-semibold mb-2"> <i class="fa-solid fa-screwdriver-wrench"></i>Issue Reporting</h3>
       <p class="text-gray-600 text-sm">
-        Tenants can report issues and admin can track them easily.
+        Tenants submit maintenance issues which are tracked by management.
       </p>
     </div>
 
