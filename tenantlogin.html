@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-black p-6 rounded-2xl shadow-lg">
+
+        <nav class="text-white">
+            <ul class="flex justify-center gap-8 text-lg font-semibold">
+            <li><a href="Registration.html" class="hover:text-blue-300 transition duration-300">Register</a></li>
+            <li><a href="login.html" class="hover:text-blue-300 transition duration-300">LogIn</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="flex justify-center items-center min-h-screen px-4">
+         
+        <fieldset class="bg-rose-100 p-5 rounded-2xl shadow-lg w-full mt-1 max-w-md">
+           
+            <h1 class="text-xl font-bold text-center mb-6">Welcome Back</h1>
+            <h1 class="text-xl font-bold text-center mb-6">Please Log in</h1>
+
+           <form class="">
+
+            <div class="flex flex-col">
+                <label for="email" class="mb-2 font-semibold"> Enter your email:</label>
+                <input type="email" class="border border-gray-300 p-3 rounded-xl" name="email" required><br><br>
+            </div>
+             
+            <div class="flex flex-col">
+                <label for="password" class="mb-2 font-semibold"> Enter your password:</label>
+                <input type="password" class="border border-gray-300 p-3 rounded-xl" name="password"><br><br>
+            </div>
+               <p>Dont have an account? <a href="Registration.html">Register here</a></p>
+            </div><br>
+            <button 
+                class=" bg-black text-white p-3 block mx-auto rounded-xl hover:bg-gray-800 "
+            >
+                Login
+            </button>
+                
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>

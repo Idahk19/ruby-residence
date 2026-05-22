@@ -34,8 +34,8 @@
         Welcome to Ruby Residence
       </h1>
 
-      <p class="text-gray-300 mb-6">
-        Simplifying apartment management for tenants and property administrators through a smart, organized platform.
+      <p class="text-gray-300 font-semibold mb-6">
+       Your home, made simpler. Access rent details, bills, and residence updates in one place.
       </p>
 
       <p class="text-3xl font-bold mb-6">
@@ -43,13 +43,16 @@
       </p>
 
       <div class="flex gap-4">
-        <button class="bg-gray-900 text-white px-2 py-2 rounded hover:bg-yellow-700">
+        <a href="tenantlogin.html">
+        <button class="bg-gray-900 font-semibold text-white px-2 py-2 rounded hover:bg-yellow-700">
           Admin Login
         </button>
-
-        <button class="bg-white text-black px-2 py-2 rounded hover:bg-gray-300">
+        </a>
+        <a href="tenantlogin.html">
+        <button class="bg-white text-black font-semibold px-2 py-2 rounded hover:bg-gray-300">
           Tenant Login 
         </button>
+        </a>
       </div>
 
     </div>
@@ -57,24 +60,39 @@
     <!-- RIGHT SIDE (Why section) -->
     <div class="max-w-xl bg-gray-500/50 rounded-xl px-3 py-2" >
 
-      <h1 class="text-2xl font-bold text-gray-900 mb-6">
-         Why Ruby Residence?
-      </h1>
+    <div>
 
-      <p class="text-white mb-4">
-        <i class="fa-solid fa-check"></i> Easy apartment management for tenants and admins
+  <h1 class="text-3xl font-bold text-white mb-6">
+    Why Ruby Residence?
+  </h1>
+
+  <div class="space-y-4">
+
+    <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
+      <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+      <p class="text-white text-sm">
+      A structured way for tenants to access rent and housing information from management
       </p>
-
-      <p class="text-white mb-4">
-        <i class="fa-solid fa-check"></i> Clear billing and payment tracking system
-      </p>
-
-      <p class="text-white">
-        <i class="fa-solid fa-check "></i> Better communication between tenants and management
-      </p>
-
     </div>
 
+    <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
+      <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+      <p class="text-white text-sm">
+      Monthly rent and utility bills are recorded and made available to tenants for reference
+      </p>
+    </div>
+
+    <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
+      <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+      <p class="text-white text-sm">
+      Important updates and notices from management are shared with all residents within the apartment
+
+      </p>
+    </div>
+
+  </div>
+
+</div>
   </div>
 
 </section>
@@ -158,6 +176,12 @@
         <p text-center>&copy; 2026 Rubyresidence. All Rights Reserved</p>
 
     </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 
     
