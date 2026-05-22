@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Residence</title>
+      <script src="https://kit.fontawesome.com/3f286a15d5.js" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100">
+
+   <fieldset class="bg-white mt-15 mr-10 ml-10 rounded-lg shadow overflow-hidden">
+
+    <!-- FULL WIDTH HEADER -->
+    <header class="bg-red-900 w-full">
+        <nav class="text-white flex justify-between items-center p-4">
+
+            <h1 class="text-2xl font-bold tracking-widest uppercase">
+                Ruby Residence
+            </h1>
+
+            <ul class="flex gap-6 text-sm">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+ <div class=" grid md:grid-cols-2 gap-8 mt-8">
+
+    <!-- LEFT SIDE: CONTACT INFO -->
+    <div class="ml-5">
+        <h2 class="text-2xl font-bold mb-2 sm:text-center">Contact us</h2>
+
+        <p class="text-gray-600 text-md mb-4">
+            For rent inquiries, maintenance issues, or general support, reach out using the details below or send a message through the form.
+        </p>
+
+        <p class="text-md text-gray-900 mb-2">
+            <i class="fa-solid fa-phone"></i> +254 577 322 15
+        </p>
+
+        <p class="text-md text-gray-900 mb-2">
+            <i class="fa-solid fa-at"></i>
+            <a href="mailto:rubyresidence@gmail.com" class="hover:text-yellow-500">
+                rubyresidence@gmail.com
+            </a>
+        </p>
+
+        <p class="text-md text-gray-900">
+            <i class="fa-solid fa-location-crosshairs"></i> Nairobi, Kenya
+        </p>
+    </div>
+
+   <div class="mr-5">
+
+    <h2 class="font-bold text-center text-2xl" >Submit your issues</h2>
+    <br>
+    <form class="space-y-4">
+      <div class="sm:ml-5">
+        <div >
+            <label class="blocktext-md font-semibold mb-1">Full Name:</label>
+            <input type="text" class="w-full p-3 rounded border border-gray-300" placeholder="Enter your name">
+        </div>
+
+        <div>
+            <label class="block text-md font-semibold mb-1">Email:</label>
+            <input type="email" class="w-full p-3 rounded border border-gray-300" placeholder="Enter your email">
+        </div>
+
+        <div>
+            <label class="block text-md font-semibold mb-1">House Number:</label>
+            <input type="text" class="w-full p-3 rounded border border-gray-300" placeholder="Enter your email">
+        </div>
+
+        <div>
+            <label class="block text-md font-semibold mb-1">Subject:</label>
+            <input type="text" class="w-full p-3 rounded border border-gray-300" placeholder="What is it about?">
+        </div>
+
+        <div>
+            <label class="block text-md font-semibold mb-1">Message:</label>
+            <textarea rows="4" class="w-full p-3 rounded border border-gray-300" placeholder="Write your message..."></textarea>
+        </div> <br>
+
+        <button class="bg-red-900 text-white px-6 py-3 rounded hover:bg-red-800 w-full">
+            Send Message
+        </button>
+    </div>
+    </form> 
+    <br>
+    </div>
+    </div>
+    </fieldset>
+    </main>
+    </body>
+    </html>
