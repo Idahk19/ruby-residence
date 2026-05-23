@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Issues</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/3f286a15d5.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+
+
+<header class="bg-red-900 text-white">
+<nav class="bg-red-900 text-white">
+
+  <div class="max-w-3xl mx-auto p-2">
+
+    <!-- WELCOME -->
+    <p class="text-lg font-bold text-center">
+      
+    </p>
+
+    <!-- NAV LINKS -->
+    <ul class="flex justify-center gap-6 text-md mt-3">
+
+      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300">Report Issues</a></li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+</header>
+
+<!-- MOBILE TOP BAR -->
+<div class="md:hidden bg-red-900 text-white flex justify-between items-center p-4">
+  
+
+  <button id="menuBtn" class="text-2xl">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+</div>
+
+<!-- OVERLAY BACKDROP -->
+<div id="overlay" class="hidden ">
+
+<!-- SIDEBAR -->
+<aside id="sidebar"
+  class="fixed  w-64 h-full bg-red-950 text-white p-6 space-y-6 transform -translate-x-full md:translate-x-0 md:static md:h-auto transition duration-300 ">
+
+  <h2 class="text-xl font-bold">Idah's Menu</h2>
+
+  <nav class="space-y-4 text-sm">
+
+    <a href="./tenantdashboard.html" class="block hover:text-yellow-300">
+      <i class="fa-solid fa-gauge mr-2"></i> Dashboard
+    </a>
+
+    <a href="notices.html" class="block hover:text-yellow-300">
+      <i class="fa-solid fa-bullhorn mr-2"></i> Notices
+    </a>
+
+    <a href="reported_issues.html" class="block hover:text-yellow-300">
+      <i class="fa-solid fa-triangle-exclamation mr-2"></i> Reported Issues
+    </a>
+
+    <a href="index.html" class="block hover:text-yellow-300 mt-6">
+      Logout
+    </a>
+
+  </nav>
+
+</aside>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="flex-1 p-6 space-y-6">
+
+  <!-- PAGE TITLE -->
+  <div>
+    <h2 class="text-3xl font-bold text-center text-red-900">
+      Apartment Notices
+    </h2>
+
+    <p class="text-gray-600 text-center mt-2">
+      Please take these notices seriously !!
+    </p>
+  </div>
+
+  <!-- ISSUE CARD 1 -->
+  <div class="bg-white rounded-xl shadow p-6 space-y-4">
+     <h2 class="text-10xl text-sm font-bold text-center text-red-900">
+      4th May, 2026
+    </h2>
+
+    <!-- TOP -->
+    <div class="flex justify-between items-center">
+
+      <h3 class="text-xl font-bold">
+        Water Leakage
+      </h3>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <p class="text-gray-600">
+     Please report water leakage immediately to avoid wastage
+    </p>
+
+    <!-- BUTTON -->
+    <button class="bg-red-900 text-white px-5 py-2 rounded-lg hover:bg-red-800 transition">
+      Reply
+    </button>
+
+  </div>
+
+  <!-- ISSUE CARD 2 -->
+  <div class="bg-white rounded-xl shadow p-6 space-y-4">
+
+    <div class="flex justify-between items-center">
+
+      <h3 class="text-xl font-bold">
+        Rent Payment
+      </h3>
+
+    </div>
+
+    <p class="text-gray-600">
+      Please clear all your arreas by 6th May 2026
+    </p>
+
+    <button class="bg-red-900 text-white px-5 py-2 rounded-lg hover:bg-red-800 transition">
+      Reply
+    </button>
+
+  </div>
+
+</main>
+
+<!-- SCRIPT -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  function toggleMenu() {
+    sidebar.classList.toggle("-translate-x-full");
+    overlay.classList.toggle("hidden");
+  }
+
+  menuBtn.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
+</script>
+
+</body>
+</html>
