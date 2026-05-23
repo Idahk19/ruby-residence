@@ -10,8 +10,8 @@
 <body class="bg-gray-100 text-gray-800">
 
      <!-- NAVBAR -->
-    <header class="bg-red-900 p-4">
-       <nav class="text-white mx-auto flex justify-between items-center p-2">
+    <header class="bg-red-900 p-4 ">
+       <nav class="text-white text-bold mx-auto flex justify-between items-center p-2">
 
          <h1 class="text-2xl font-bold tracking-widest uppercase">Ruby Residence</h1>
          <ul class="flex gap-6 text-sm">
@@ -23,76 +23,154 @@
       </div>
       </nav>
     </header>
-    <main>
-        <section class="grid grid-cols-2">
-           <div>
-              <p class="text-gray-600">
-                Ruby Residence is a residential apartment system used to manage tenants, rent records, and communication between residents and management. It provides a structured way to organize housing information and keep track of daily apartment operations.
+    <main class="space-y-20">
+
+    <!-- HERO SECTION -->
+    <section class="grid md:grid-cols-2 items-center bg-red-900/10 rounded-2xl mx-6 mt-10 overflow-hidden shadow">
+
+        <!-- TEXT -->
+        <div class="p-10 space-y-6">
+
+            <p class="text-5xl font-extrabold text-red-900 leading-relaxed ">
+                Ruby Residence
             </p>
+
+            <p class="text-gray-700 text-lg leading-relaxed ">
+                Ruby Residence is a residential apartment system used to manage tenants, rent records, and communication between residents and management.
+            </p>
+
+            <p class="text-gray-600 leading-relaxed ">
+                The system provides a structured way to organize housing information and support daily apartment operations within the residence.
+            </p>
+
+            <div class="flex gap-4 pt-2">
+                <a href="tenantlogin.html"
+                   class="bg-red-900 text-white px-6 py-3 rounded-lg hover:bg-red-800 transition">
+                    Tenant Portal
+                </a>
+
+                <a href="adminlogin.html"
+                   class="border border-red-900 text-red-900 px-6 py-3 rounded-lg hover:bg-red-900 hover:text-white transition">
+                    Admin Portal
+                </a>
+            </div>
 
         </div>
-             <div class="md:w-1/2">
-            <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc"
-                 class="rounded-lg shadow">
-        </div>
-        </section>
-        <section class="grid grid-cols-2">
-            <div class="">
-             <h2 class="text-3xl font-bold  text-red-900">
-                How the Residence Works
-            </h2>
-            
-            <p class="text-gray-600">
-                Tenants are registered into the system and assigned apartment units.
-                Monthly rent records and updates are maintained by the administration.
-            </p>
-             <p class="text-gray-600">
-                Communication between tenants and management is handled through notices and issue reporting.
-            </p>
-            </div>
-           <div>
-            <img src="" alt="">
-           </div>
-        </section>
-         <section class="p-10">
 
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold text-red-900">
-                Apartment Overview
-            </h2>
-
-            <p class="text-gray-600">
-                Key areas managed within Ruby Residence
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="font-bold mb-2">Tenant Records</h3>
-                <p class="text-gray-600 text-sm">
-                    Information about tenants and their assigned units is stored for reference.
-                </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="font-bold mb-2">Rent Tracking</h3>
-                <p class="text-gray-600 text-sm">
-                    Monthly rent status and payment records are maintained.
-                </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="font-bold mb-2">Residence Notices</h3>
-                <p class="text-gray-600 text-sm">
-                    Updates from management are shared with all tenants.
-                </p>
-            </div>
-            <div>
-            <img src="" alt="">
-           </div>
+        <!-- IMAGE -->
+        <div class="h-full">
+            <img 
+                src="assets/images/apartment.jpg"
+                class="w-full h-full object-cover"
+            >
         </div>
 
     </section>
-       
-    </main>
+
+
+    <!-- SECOND SECTION -->
+    <section class="grid md:grid-cols-2 gap-10 items-center mx-6">
+
+        <!-- IMAGE -->
+        <div>
+            <img 
+                src="assets/images/staircase.jpg"
+                class="rounded-2xl shadow-lg w-full"
+            >
+        </div>
+
+        <!-- TEXT -->
+        <div class="space-y-5">
+
+            <h2 class="text-4xl font-bold text-red-900">
+                How the Residence Works
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed">
+                Tenants are registered into the residence system and assigned apartment units managed by administration.
+            </p>
+
+            <p class="text-gray-600 leading-relaxed">
+                Monthly rent records, notices, and maintenance issues are handled within the system to support communication between management and residents.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- OVERVIEW SECTION -->
+    <section class="px-6 pb-12">
+
+        <!-- TITLE -->
+        <div class="text-center mb-12">
+
+            <h2 class="text-4xl font-bold text-red-900 mb-3">
+                Apartment Overview
+            </h2>
+
+            <p class="text-gray-600 text-lg">
+                Key areas managed within Ruby Residence
+            </p>
+
+        </div>
+
+        <!-- CARDS -->
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- CARD -->
+            <div class="bg-white p-8 rounded-2xl shadow hover:-translate-y-1 transition">
+
+                <div class="text-red-900 text-3xl mb-4">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h3 class="font-bold text-xl mb-3">
+                    Tenant Records
+                </h3>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Information about tenants and assigned apartment units is maintained for management reference.
+                </p>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-white p-8 rounded-2xl shadow hover:-translate-y-1 transition">
+
+                <div class="text-red-900 text-3xl mb-4">
+                    <i class="fa-solid fa-money-bill"></i>
+                </div>
+
+                <h3 class="font-bold text-xl mb-3">
+                    Rent Tracking
+                </h3>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Monthly rent records and payment updates are organized within the apartment system.
+                </p>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-white p-8 rounded-2xl shadow hover:-translate-y-1 transition">
+
+                <div class="text-red-900 text-3xl mb-4">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+
+                <h3 class="font-bold text-xl mb-3">
+                    Residence Notices
+                </h3>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Important announcements and updates are shared with all residents through the platform.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
