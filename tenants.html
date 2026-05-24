@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenant Records</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/3f286a15d5.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- MOBILE TOP BAR -->
+<div class="md:hidden bg-red-900 text-white flex justify-between items-center p-4">
+
+  <h1 class="font-bold text-lg">Tenants</h1>
+
+  <button id="menuBtn" class="text-2xl">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay"
+class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
+</div>
+
+<div class="flex min-h-screen">
+
+<!-- SIDEBAR -->
+<aside id="sidebar"
+class="fixed  w-64 h-full bg-red-950 text-white p-6 transform -translate-x-full md:translate-x-0 md:static transition duration-300 z-50">
+
+<h2 class="text-2xl font-bold mb-8">Admin Menu</h2>
+
+<nav class="space-y-4 text-sm">
+
+<a href="admindashboard.html" class="block hover:text-yellow-300">Dashboard</a>
+
+<a href="tenants.html" class="block text-yellow-300 font-semibold">Tenants</a>
+
+<a href="payments.html" class="block hover:text-yellow-300">Payments</a>
+
+<a href="adminissues.html" class="block hover:text-yellow-300">Reported Issues</a>
+
+<a href="index.html" class="block hover:text-yellow-300 mt-6">Logout</a>
+
+</nav>
+
+</aside>
+
+<!-- MAIN -->
+<main class="flex-1 p-6">
+
+<div class="bg-white rounded-xl shadow p-6">
+
+<h2 class="text-3xl font-bold text-red-900 mb-6">
+Tenant Records
+</h2>
+
+<div class="overflow-x-auto">
+
+<table class="w-full text-sm text-left">
+
+<thead class="bg-red-900 text-white">
+
+<tr>
+<th class="p-3">Tenant</th>
+<th class="p-3">House</th>
+<th class="p-3">Phone</th>
+<th class="p-3">Status</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr class="border-b">
+<td class="p-3">Idah Karwitha</td>
+<td class="p-3">B12</td>
+<td class="p-3">0712345678</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+
+<tr class="border-b bg-gray-50">
+<td class="p-3">James Mwangi</td>
+<td class="p-3">A02</td>
+<td class="p-3">0700123456</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-3">Beatrice Wanjiku</td>
+<td class="p-3">A10</td>
+<td class="p-3">0722456789</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+<tr class="border-b">
+<td class="p-3">Faith Akinyi</td>
+<td class="p-3">B02</td>
+<td class="p-3">0728433230</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+<tr class="border-b">
+<td class="p-3">Leonard Otieno</td>
+<td class="p-3">B10</td>
+<td class="p-3">0712345678</td>
+<td class="p-3 text-green-600 font-semibold">active</td>
+</tr>
+<tr class="border-b">
+<td class="p-3">Peter Kamau</td>
+<td class="p-3">C02</td>
+<td class="p-3">0745 667 890</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+<tr class="border-b">
+<td class="p-3">Cynthia Atieno</td>
+<td class="p-3">C10</td>
+<td class="p-3">0798 112 334</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+<tr class="border-b">
+<td class="p-3">David Mutua</td>
+<td class="p-3">D02</td>
+<td class="p-3">0703 556 921</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+<tr class="border-b">
+<td class="p-3">Faith Akinyi</td>
+<td class="p-3">D10</td>
+<td class="p-3">0722456789</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+<tr class="border-b">
+<td class="p-3">Aisha Mohamed</td>
+<td class="p-3">E02</td>
+<td class="p-3">0721 889 466</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+
+<tr class="border-b">
+<td class="p-3">Kevin Ouma</td>
+<td class="p-3">E10</td>
+<td class="p-3">0721 666 455</td>
+<td class="p-3 text-green-600 font-semibold">Active</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+function toggleMenu() {
+sidebar.classList.toggle("-translate-x-full");
+overlay.classList.toggle("hidden");
+}
+
+menuBtn.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
+</script>
+
+</body>
+</html>
