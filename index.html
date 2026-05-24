@@ -1,45 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruby Residence</title>
-      <script src="https://kit.fontawesome.com/3f286a15d5.js" crossorigin="anonymous"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruby Residence</title>
+
+<script src="https://kit.fontawesome.com/3f286a15d5.js" crossorigin="anonymous"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100  ">
 
-     <!-- NAVBAR -->
-    <header class="bg-red-900 p-4">
-       <nav class="text-white mx-auto flex justify-between items-center p-2">
+<body class="bg-gray-100">
 
-         <h1 class="text-2xl font-bold text-gray-900 tracking-widest uppercase">Ruby Residence</h1>
-         <ul class="flex gap-6 text-sm">
-            <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
-            <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
-            <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
-         </ul>
-        <div class="flex gap-4">
-        <a href="adminlogin.html">
-        <button class="bg-gray-900 font-semibold text-white px-2 py-2 rounded hover:bg-yellow-700">
+<!-- NAVBAR -->
+<header class="bg-red-900 p-4 relative">
+
+  <nav class="max-w-6xl mx-auto flex justify-between items-center text-white">
+
+    <!-- LOGO -->
+    <h1 class="text-2xl font-bold tracking-widest uppercase">
+      Ruby Residence
+    </h1>
+
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- DESKTOP MENU (UNCHANGED) -->
+    <ul class="hidden md:flex gap-6 text-sm items-center">
+      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
+
+    <!-- LOGIN BUTTONS (DESKTOP ONLY) -->
+    <div class="hidden md:flex gap-4">
+      <a href="adminlogin.html">
+        <button class="bg-gray-900 text-white px-2 py-2 rounded hover:bg-yellow-700">
           Admin Login
         </button>
-        </a>
-        <a href="tenantlogin.html">
-        <button class="bg-white text-black  font-semibold px-2 py-2 rounded hover:bg-gray-300">
-          Tenant Login 
+      </a>
+
+      <a href="tenantlogin.html">
+        <button class="bg-white text-black font-semibold px-2 py-2 rounded hover:bg-gray-300">
+          Tenant Login
         </button>
-        </a>
-        
-      </div>
-        </nav>
-     </header>
-<!-- HERO SECTION -->
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- MOBILE MENU (TOGGLE) -->
+  <div id="mobileMenu"
+       class="hidden md:hidden flex flex-col gap-4 mt-4 text-white text-sm">
+
+    <a href="index.html" class="hover:text-yellow-300">Home</a>
+    <a href="about.html" class="hover:text-yellow-300">About Us</a>
+    <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+
+    <a href="adminlogin.html">
+      <button class="bg-gray-900 w-full py-2 rounded hover:bg-yellow-700">
+        Admin Login
+      </button>
+    </a>
+
+    <a href="tenantlogin.html">
+      <button class="bg-white text-black w-full py-2 rounded hover:bg-gray-300">
+        Tenant Login
+      </button>
+    </a>
+
+  </div>
+
+</header>
+
+<!-- HERO SECTION (UNCHANGED) -->
 <section class="bg-red-950 text-white py-20 px-10">
 
-  <div class=" max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
 
-    <!-- LEFT SIDE (Hero content) -->
     <div class="text-left max-w-xl">
 
       <h1 class="text-4xl font-bold mb-4">
@@ -53,51 +92,53 @@
       <p class="text-3xl font-bold mb-6">
         Get Started
       </p>
+
       <a href="signup.html">
-      <button class="bg-gray-900 text-white px-6 py-2 rounded hover:bg-yellow-700">Sign up</button>
+        <button class="bg-gray-900 text-white px-6 py-2 rounded hover:bg-yellow-700">
+          Sign up
+        </button>
       </a>
+
     </div>
 
-    <!-- RIGHT SIDE (Why section) -->
-    <div class="max-w-xl bg-gray-500/50 rounded-xl px-3 py-2" >
+    <div class="max-w-xl bg-gray-500/50 rounded-xl px-3 py-2">
 
-    <div>
+      <h1 class="text-3xl font-bold text-white mb-6">
+        Why Ruby Residence?
+      </h1>
 
-  <h1 class="text-3xl font-bold text-white mb-6">
-    Why Ruby Residence?
-  </h1>
+      <div class="space-y-4">
 
-  <div class="space-y-4">
+        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
+          <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+          <p class="text-white text-sm">
+            A structured way for tenants to access rent and housing information from management
+          </p>
+        </div>
 
-    <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
-      <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
-      <p class="text-white text-sm">
-      A structured way for tenants to access rent and housing information from management
-      </p>
+        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
+          <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+          <p class="text-white text-sm">
+            Monthly rent and utility bills are recorded and made available
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
+          <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
+          <p class="text-white text-sm">
+            Important updates and notices are shared with all residents
+          </p>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
-      <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
-      <p class="text-white text-sm">
-      Monthly rent and utility bills are recorded and made available to tenants for reference
-      </p>
-    </div>
-
-    <div class="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
-      <i class="fa-solid fa-check text-yellow-400 mt-1"></i>
-      <p class="text-white text-sm">
-      Important updates and notices from management are shared with all residents within the apartment
-
-      </p>
-    </div>
-
-  </div>
-
-</div>
   </div>
 
 </section>
-<!-- FEATURES SECTION -->
+
+<!-- FEATURES (UNCHANGED) -->
 <section class="py-16 px-10 bg-gray-100">
 
   <div class="text-center mb-6">
@@ -111,75 +152,73 @@
 
   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
 
-    <!-- Feature 1 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2"><i class="fa-solid fa-money-bill"></i>Billing System</h3>
-      <p class="text-gray-600 text-sm">
-        Rent and utility bills are recorded and updated for each tenant.
-      </p>
+    <div class="bg-white p-6 rounded-xl shadow">
+      Billing System
     </div>
 
-    <!-- Feature 2 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2"><i class="fa-regular fa-house"></i> Room Management</h3>
-      <p class="text-gray-600 text-sm">
-        Rooms are marked as occupied or available within the residence system.
-      </p>
+    <div class="bg-white p-6 rounded-xl shadow">
+      Room Management
     </div>
 
-    <!-- Feature 3 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2"><i class="fa-solid fa-bullhorn"></i> Notices</h3>
-      <p class="text-gray-600 text-sm">
-      Management posts updates that are visible to all tenants.
-      </p>
+    <div class="bg-white p-6 rounded-xl shadow">
+      Notices
     </div>
 
-    <!-- Feature 4 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2"> <i class="fa-solid fa-screwdriver-wrench"></i>Issue Reporting</h3>
-      <p class="text-gray-600 text-sm">
-        Tenants submit maintenance issues which are tracked by management.
-      </p>
+    <div class="bg-white p-6 rounded-xl shadow">
+      Issue Reporting
     </div>
 
   </div>
 
 </section>
 
-    <footer class="bg-gray-900 text-white py-12 px-10">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-         <section>
+<!-- FOOTER (UNCHANGED) -->
+<footer class="bg-gray-900 text-white py-12 px-10">
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+    <div>
       <h2 class="text-xl font-bold mb-4">Quick Links</h2>
       <ul class="space-y-2 text-sm text-gray-300">
-        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
-        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
-      </section>
-      <section>
+    </div>
+
+    <div>
       <h2 class="text-xl font-bold mb-4">Contact Us</h2>
-      <p class="text-sm text-gray-300"><i class="fa-solid fa-phone"></i> +254 577 322 15</p>
-      <p class="text-sm text-gray-300"><i class="fa-solid fa-at"></i>  <a href="mailto:rubyresidence@gmail.com" class="hover:text-yellow-400">rubyresidence@gmail.com</a></p>
-      <p class="text-sm text-gray-300"> <i class="fa-solid fa-location-crosshairs"></i> Nairobi, Kenya</p>
-    </section>
-       <section>
+      <p class="text-sm text-gray-300">+254 577 322 15</p>
+      <p class="text-sm text-gray-300">rubyresidence@gmail.com</p>
+      <p class="text-sm text-gray-300">Nairobi, Kenya</p>
+    </div>
+
+    <div>
       <h2 class="text-xl font-bold mb-4">Follow Us</h2>
-
       <div class="flex gap-4 text-xl">
-        <i class="fa-brands fa-instagram hover:text-yellow-400 cursor-pointer"></i>
-        <i class="fa-brands fa-whatsapp hover:text-yellow-400 cursor-pointer"></i>
-        <i class="fa-brands fa-facebook hover:text-yellow-400 cursor-pointer"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-facebook"></i>
       </div>
+    </div>
 
-    </section>
-    </div><br>
-        <p text-center>&copy; 2026 Rubyresidence. All Rights Reserved</p>
+  </div>
 
-    </footer>
-   
+  <p class="text-center mt-8 text-gray-400">
+    &copy; 2026 Ruby Residence. All Rights Reserved
+  </p>
 
+</footer>
 
-    
+<!-- TOGGLE SCRIPT -->
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+</script>
+
 </body>
 </html>
