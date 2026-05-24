@@ -192,8 +192,9 @@ Rubyresidence aims to:
 ![Tenant Dashboard Page](assets/images/tenantdash.png)
 
 ## Live URL
-
-
+```
+https://ruby-residence.vercel.app/
+```
 
 ## License
 
