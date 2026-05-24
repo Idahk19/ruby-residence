@@ -10,11 +10,17 @@
 </head>
 
 <body class="bg-gray-100">
-    <header class="bg-red-900 text-white p-4 flex justify-between items-center">
+   <header class="bg-red-900 text-white p-4 relative flex items-center">
 
-  <button id="menuBtn" class="md:hidden text-2xl">
+  <!-- MENU BUTTON -->
+  <button id="menuBtn" class="md:hidden text-2xl absolute left-4">
     <i class="fa-solid fa-bars"></i>
   </button>
+
+  <!-- CENTERED TITLE -->
+  <p class="text-2xl font-bold w-full text-center">
+    Reported Issues
+  </p>
 
 </header>
 
@@ -48,6 +54,8 @@ class="fixed  w-64 h-screen bg-red-950  text-white p-6 transform -translate-x-fu
 </aside>
 <!-- ISSUE CARD WRAPPER -->
 <div class="space-y-6 mt-4 ml-10 mr-2 ">
+
+     
 
 <!-- ISSUE 1 -->
 <div class="bg-white p-5 rounded-lg shadow border-l-4 border-yellow-500">
