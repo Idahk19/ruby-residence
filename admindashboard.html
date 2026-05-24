@@ -15,9 +15,6 @@
 <!-- MOBILE TOP BAR -->
 <div class="md:hidden bg-red-900 text-white flex justify-between items-center p-4">
 
-  <h1 class="font-bold text-lg">
-    Admin Dashboard
-  </h1>
 
   <button id="menuBtn" class="text-2xl">
     <i class="fa-solid fa-bars"></i>
@@ -58,7 +55,7 @@ class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
 
   <!-- SIDEBAR -->
   <aside id="sidebar"
-  class="fixed top-0 left-0 w-64 h-full bg-red-950 text-white p-6 space-y-6 transform -translate-x-full md:translate-x-0 md:static md:block transition duration-300 z-50">
+  class="fixed  w-64 h-full bg-red-950 text-white p-6 space-y-6 transform -translate-x-full md:translate-x-0 md:static md:block transition duration-300 z-50">
 
     <h2 class="text-2xl font-bold">
       Admin Menu
@@ -81,14 +78,9 @@ class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
         Payments
       </a>
 
-      <a href="#issues" class="block hover:text-yellow-300">
+      <a href="adminissues.html" class="block hover:text-yellow-300">
         <i class="fa-solid fa-screwdriver-wrench mr-2"></i>
         Reported Issues
-      </a>
-
-      <a href="#notices" class="block hover:text-yellow-300">
-        <i class="fa-solid fa-bullhorn mr-2"></i>
-        Notices
       </a>
 
       <a href="index.html" class="block hover:text-yellow-300 mt-6">
@@ -106,7 +98,7 @@ class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
     <section id="dashboard" class="bg-white rounded-xl shadow p-6">
 
       <h2 class="text-3xl font-bold text-red-900">
-        Welcome Admin
+        Welcome to your dashboard Admin, 
       </h2>
 
       <p class="text-gray-600 mt-2">
@@ -120,12 +112,12 @@ class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
 
       <div class="bg-white p-6 rounded-xl shadow">
         <p class="text-gray-500 text-sm">Total Tenants</p>
-        <h3 class="text-3xl font-bold text-red-900 mt-2">48</h3>
+        <h3 class="text-3xl font-bold text-red-900 mt-2">11</h3>
       </div>
 
       <div class="bg-white p-6 rounded-xl shadow">
         <p class="text-gray-500 text-sm">Occupied Units</p>
-        <h3 class="text-3xl font-bold text-red-900 mt-2">42</h3>
+        <h3 class="text-3xl font-bold text-red-900 mt-2">11</h3>
       </div>
 
       <div class="bg-white p-6 rounded-xl shadow">
@@ -133,49 +125,7 @@ class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
         <h3 class="text-3xl font-bold text-red-900 mt-2">6</h3>
       </div>
 
-      <div class="bg-white p-6 rounded-xl shadow">
-        <p class="text-gray-500 text-sm">Monthly Revenue</p>
-        <h3 class="text-3xl font-bold text-red-900 mt-2">Ksh 720K</h3>
-      </div>
-
     </section>
-
-   
-
-    <!-- REPORTED ISSUES -->
-    <section id="issues" class="bg-white rounded-xl shadow p-6">
-
-      <h2 class="text-2xl font-bold text-red-900 mb-4">
-        Reported Issues
-      </h2>
-
-      <div class="space-y-4">
-
-        <div class="border rounded-lg p-4">
-
-          <div class="flex justify-between">
-
-            <h3 class="font-bold">
-              Water Leakage - B12
-            </h3>
-
-            <span class="text-yellow-600 font-semibold">
-              Pending
-            </span>
-
-          </div>
-
-          <p class="text-gray-600 mt-2">
-            Tenant reported water leakage in kitchen sink.
-          </p>
-
-          <button class="mt-4 bg-red-900 text-white px-4 py-2 rounded hover:bg-red-800">
-            Reply
-          </button>
-
-        </div>
-
-      </div>
 
     </section>
 
