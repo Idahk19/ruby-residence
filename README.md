@@ -93,18 +93,14 @@ Responsive techniques used include:
 - Mobile-friendly navigation  
 
 ---
-## screenshots
+
 
 # Future Improvements
 
 Potential future upgrades include:
 
 - User authentication system  
-- Personalized workout dashboard  
-- Nutrition tracking  
-- Membership subscription plans  
-- Workout video integration  
-- Dark/light theme toggle  
+- Backend for data storage 
 
 ---
 
@@ -185,14 +181,27 @@ Rubyresidence aims to:
 - Create a simple and user-friendly digital apartment system    
 
 ---
+## Screenshots
+### Home page
+![Home Page](assets/images/home.png)
 
-# License
+### Admin Dashboard Page
+![Admin Dashboard Page](assets/images/admindash.png)
+
+### Tenant Dashboard Page
+![Tenant Dashboard Page](assets/images/tenantdash.png)
+
+## Live URL
+
+
+
+## License
 
 MIT License
 
-# Author
+## Author
 Idah Karwitha
 
-# Copyright 
+## Copyright 
 
 &copy; 2026 Ruby Residence
