@@ -5,6 +5,19 @@ const password = document.getElementById("password");
 const fullname = document.getElementById("fullname");
 const confirmPassword = document.getElementById("repeatPassword");
 const passwordError = document.getElementById("passwordError");
+const showPassword = document.getElementById("showPassword");
+
+// show password 
+showPassword.addEventListener("change", function (e) {
+
+    if (this.checked) {
+        password.type = "text";
+        confirmPassword.type = "text";
+    } else {
+        password.type = "password";
+        confirmPassword.type = "password";
+    }
+});
 
 form.addEventListener("submit", function (e){
     e.preventDefault();
@@ -27,6 +40,7 @@ form.addEventListener("submit", function (e){
     return;
 
 }
+
 
 const user = {
     fullname,
