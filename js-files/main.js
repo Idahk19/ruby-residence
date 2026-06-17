@@ -41,13 +41,23 @@ form.addEventListener("submit", function (e){
 
 }
 
-
+// instance for the new user
 const user = new User(
     fullname,
     email,
     housenumber,
     password
 );
+
+// adds new user
 UserManager.addUser(user);
+
+// check if the same email exists
+if (UserManager.emailExists(email)){
+    passwordError.textContent = "Email already exists";
+    return
+}
+
 form.reset();
+
 })

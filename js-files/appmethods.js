@@ -19,4 +19,8 @@ class UserManager{
         users.push(user);
         this.saveUsers(users)
     }
+    emailExists(email){
+        const users = this.getUsers();
+        return users.find(user=> user.email === email);
+    }
 }
