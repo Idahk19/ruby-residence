@@ -43,8 +43,8 @@ form.addEventListener("submit", function (e) {
         loginError.textContent = "Incorrect password";
         return;
     }
-    
-    if (rememberMe.checked){
+
+    if (rememberMe?.checked){
         localStorage.setItem("currentUser", JSON.stringify(user));
     } else {
         sessionStorage.setItem("currentUser", JSON.stringify(user));
