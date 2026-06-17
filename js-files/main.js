@@ -42,15 +42,12 @@ form.addEventListener("submit", function (e){
 }
 
 
-const user = {
+const user = new User(
     fullname,
     email,
     housenumber,
     password
-};
-
-localStorage.setItem("user", JSON.stringify(user));
-
-alert("Account created successfully!");
+);
+UserManager.addUser(user);
 form.reset();
 })
