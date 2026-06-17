@@ -31,7 +31,7 @@ form.addEventListener("submit", function (e) {
 
     
     // find user
-    const user = UserManager.findUserByEmail(email);
+    const user = UserManager.getUsers().find(user => user.email === email);
     
      if (!user) {
         loginError.textContent = "Email not found";
@@ -43,5 +43,7 @@ form.addEventListener("submit", function (e) {
         return;
     }
     alert("Login successful!");
+    window.location.href = "tenantdashboard.html";
+
     form.reset();
 });
