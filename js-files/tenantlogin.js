@@ -6,6 +6,7 @@ const loginError = document.getElementById("loginError");
 const emailInput = document.getElementById("loginEmail");
 const passwordInput = document.getElementById("loginPassword");
 const showPassword = document.getElementById("showPassword");
+const rememberMe = document.getElementById("rememberMe");
 
 console.log(showPassword);
 
@@ -42,6 +43,14 @@ form.addEventListener("submit", function (e) {
         loginError.textContent = "Incorrect password";
         return;
     }
+    
+    if (rememberMe.checked){
+        localStorage.setItem("currentUser", JSON.stringify(user));
+    } else {
+        sessionStorage.setItem("currentUser", JSON.stringify(user));
+
+    }
+
     alert("Login successful!");
     window.location.href = "tenantdashboard.html";
 
