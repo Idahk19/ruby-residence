@@ -56,8 +56,9 @@ form.addEventListener("submit", function (e){
     if (!/\d/.test(password)) {
     passwordError.textContent = "Add at least 1 number";
     return;
+    }
 
-}
+
 
 // instance for the new user
 const user = new User(
@@ -75,4 +76,4 @@ alert("Registration successful!");
 
 form.reset();
 
-})
+});
