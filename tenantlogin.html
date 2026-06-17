@@ -23,20 +23,20 @@
                 Login to access your Ruby Residence account
             </p>
 
-          <form action="tenantdashboard.html">
+          <form action="tenantdashboard.html" id="loginForm">
 
             <div class="flex flex-col">
                 <label for="email" class="block mb-3 text-md font-bold tracking-wide text-red-900 uppercase"> Email:</label>
-                <input type="email" placeholder="example123@gmail.com" class="border border-gray-300 p-3 rounded-xl" name="email" required><br><br>
+                <input type="email" id="loginEmail"   placeholder="example123@gmail.com" class="border border-gray-300 p-3 rounded-xl" name="email" required><br><br>
             </div>
             <div class="flex flex-col">
                 <label for="housenumber" class="block mb-3 text-md font-bold tracking-wide text-red-900 uppercase"> House Number:</label>
-                <input type="text" placeholder="000" class="border border-gray-300 p-3 rounded-xl" name="housenumber" required><br><br>
+                <input type="text" id="housenumber" placeholder="000" class="border border-gray-300 p-3 rounded-xl" name="housenumber" required><br><br>
             </div>
              
             <div class="flex flex-col">
                 <label for="password" class="block mb-3 text-md font-bold tracking-wide text-red-900 uppercase"> Password:</label>
-                <input type="password"  placeholder="********" class="border border-gray-300 p-3 rounded-xl" name="password"><br><br>
+                <input type="password" id="loginPassword" placeholder="********" class="border border-gray-300 p-3 rounded-xl" name="password"><br><br>
             </div>
                <!-- REMEMBER + FORGOT -->
                 <div class="flex justify-between items-center mb-6">
@@ -66,17 +66,18 @@
                    Go back to home
                    </a>
                    </P><br>
-
-                <a href=" tenantdashboard.html">
-                <button 
+                <small id="loginError"></small>
+                
+                <button type ="submit"
                    class=" bg-red-900 w-full text-white p-3 block mx-auto rounded-xl hover:bg-red-700 "
                 >
                    Login
                 </button>
-                </a>
+              
                 
             </form>
         </fieldset>
     </main>
+    <script type="module" src="tenantlogin.js"></script>
 </body>
 </html>

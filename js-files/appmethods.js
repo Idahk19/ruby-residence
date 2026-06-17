@@ -1,4 +1,4 @@
-class User {
+export class User {
     constructor(fullname, email, housenumber, password) {
         this.fullname = fullname;
         this.email = email;
@@ -7,20 +7,20 @@ class User {
     }
 }
  
-class UserManager{
-    getUsers(){
+export class UserManager{
+    static getUsers(){
         return JSON.parse(localStorage.getItem("users")) || [];
     }
-    saveUsers(){
+     static saveUsers(users){
         localStorage.setItem("users", JSON.stringify(users));
     }
-    addUsers(user){
+     static addUser(user){
         const users = this.getUsers();
         users.push(user);
         this.saveUsers(users)
     }
-    emailExists(email){
+     static emailExists(email){
         const users = this.getUsers();
-        return users.find(user=> user.email === email);
+        return users.some(user=> user.email === email);
     }
 }
