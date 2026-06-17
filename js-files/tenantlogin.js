@@ -2,15 +2,33 @@ import{User} from "./appmethods.js"
 import{UserManager} from "./appmethods.js"
 
 const form = document.getElementById("loginForm");
-const form = document.getElementById("loginError");
+const loginError = document.getElementById("loginError");
+const emailInput = document.getElementById("loginEmail");
+const passwordInput = document.getElementById("loginPassword");
+const showPassword = document.getElementById("showPassword");
+
+console.log(showPassword);
+
+// show password 
+showPassword.addEventListener("change", function (e) {
+    console.log("clicked checkbox");
+
+    if (this.checked) {
+        passwordInput.type = "text";
+        
+    } else {
+        passwordInput.type = "password";
+        
+    }
+});
 
 // event listener
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // get values
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value;
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
     
     // find user
     const user = UserManager.findUserByEmail(email);

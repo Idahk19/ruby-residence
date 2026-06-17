@@ -36,8 +36,14 @@
              
             <div class="flex flex-col">
                 <label for="password" class="block mb-3 text-md font-bold tracking-wide text-red-900 uppercase"> Password:</label>
-                <input type="password" id="loginPassword" placeholder="********" class="border border-gray-300 p-3 rounded-xl" name="password"><br><br>
-            </div>
+                <input type="password" id="loginPassword" placeholder="********" class="border border-gray-300 p-3 rounded-xl" name="password">
+                
+                <label class="flex items-center gap-2">
+                <input type="checkbox" id="showPassword">
+                  Show Password
+                </label>
+            </div><br>
+            
                <!-- REMEMBER + FORGOT -->
                 <div class="flex justify-between items-center mb-6">
 
@@ -78,6 +84,6 @@
             </form>
         </fieldset>
     </main>
-    <script type="module" src="tenantlogin.js"></script>
+    <script type="module" src="js-files/tenantlogin.js"></script>
 </body>
 </html>
