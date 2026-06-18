@@ -53,7 +53,7 @@ export class Auth {
         );
     }
 }
-export class Bills { 
+export class Bill{ 
      constructor(tenantName, houseNumber, month, type, amount, status) {
         this.tenantName = tenantName;
         this.houseNumber = houseNumber;
