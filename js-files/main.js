@@ -73,6 +73,7 @@ const user = new User(
 UserManager.addUser(user);
 
 alert("Registration successful!");
+window.location.href = "tenantlogin.html";
 
 form.reset();
 
