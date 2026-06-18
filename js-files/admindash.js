@@ -1,9 +1,14 @@
-import { Bill } from "./appmethods.js";
+import { Bill, UserManager } from "./appmethods.js";
 import { BillManager } from "./appmethods.js"; 
 import { Notices } from "./appmethods.js";
 import { ManageNotices} from "./appmethods.js"; 
 
-console.log("Bills JS loaded");
+const users = UserManager.getUsers();
+const totalTenants = users.length
+
+document.getElementById("totalTenants").textContent = totalTenants;
+
+
 
 const form = document.getElementById("billForm");
 const addBillbtn = document.getElementById("addBillBtn");
