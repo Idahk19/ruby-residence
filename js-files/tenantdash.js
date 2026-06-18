@@ -13,3 +13,4 @@ document.getElementById("userEmail").textContent =
 ` Email: ${currentUser.email}`
 document.getElementById("userHouse").textContent =
 `House Number ${currentUser.housenumber}`
+
