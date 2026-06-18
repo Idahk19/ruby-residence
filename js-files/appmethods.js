@@ -24,3 +24,32 @@ export class UserManager{
         return users.some(user=> user.email === email);
     }
 }
+export class Auth {
+
+    static #adminEmail = "admin@rubyresidence.com";
+    static #adminPassword = "Admin123";
+
+    static isAdminLogin(email, password) {
+        return (
+            email === this.#adminEmail &&
+            password === this.#adminPassword
+        );
+    }
+
+    static login(user) {
+        localStorage.setItem(
+            "currentUser",
+            JSON.stringify(user)
+        );
+    }
+
+    static logout() {
+        localStorage.removeItem("currentUser");
+    }
+
+    static getCurrentUser() {
+        return JSON.parse(
+            localStorage.getItem("currentUser")
+        );
+    }
+}
