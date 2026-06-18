@@ -87,3 +87,25 @@ export class BillManager {
         );
     }
 }
+export class Notices{
+    constructor(noticeTitle, noticeText){
+        this.noticeText = noticeText;
+        this.noticeTitle = noticeTitle;
+         this.createdAt = new Date().toISOString();
+    }
+
+}
+export class ManageNotices{
+    static getNotices(){
+        return JSON.parse(localStorage.getItem("notices"))|| [];
+    }
+     static saveNotices(notices) {
+        localStorage.setItem("notices", JSON.stringify(notices));
+    }
+     static addNotice(notice) {
+        const notices = this.getNotices();
+        notices.push(notice);
+        this.saveNotices(notices);
+    }
+    
+}
