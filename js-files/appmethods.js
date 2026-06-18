@@ -64,3 +64,26 @@ export class Bills {
         this.createdAt = new Date().toISOString();
     }
 }
+
+export class BillManager {
+
+    static getBills() {
+        return JSON.parse(localStorage.getItem("bills")) || [];
+    }
+
+    static saveBills(bills) {
+        localStorage.setItem("bills", JSON.stringify(bills));
+    }
+
+    static addBill(bill) {
+        const bills = this.getBills();
+        bills.push(bill);
+        this.saveBills(bills);
+    }
+
+    static getBillsByHouse(houseNumber) {
+        return this.getBills().filter(
+            bill => bill.houseNumber === houseNumber
+        );
+    }
+}
