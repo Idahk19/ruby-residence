@@ -1,0 +1,62 @@
+[
+      {
+    "houseNumber": "B11",
+    "type": "one-bedroom ",
+    "rent": 15000,
+    "floor": 1
+  },
+      {
+    "houseNumber": "B12",
+    "type": "one-bedroom ",
+    "rent": 15000,
+    "floor": 1
+  },
+      {
+    "houseNumber": "B13",
+    "type": "one-bedroom ",
+    "rent": 15000,
+    "floor": 1
+  },
+      {
+    "houseNumber": "B14",
+    "type": "one-bedroom ",
+    "rent": 15000,
+    "floor": 1
+  },
+      {
+    "houseNumber": "B15",
+    "type": "one-bedroom ",
+    "rent": 15000,
+    "floor": 1
+  },
+      {
+    "houseNumber": "C16",
+    "type": "two-bedroom ",
+    "rent": 25000,
+    "floor": 2
+  },
+      {
+    "houseNumber": "C17",
+    "type": "two-bedroom ",
+    "rent": 25000,
+    "floor": 3
+  },
+      {
+    "houseNumber": "C18",
+    "type": "two-bedroom ",
+    "rent": 25000,
+    "floor": 4
+  },
+      {
+    "houseNumber": "C19",
+    "type": "two-bedroom ",
+    "rent": 25000,
+    "floor": 5
+  },
+      {
+    "houseNumber": "C20",
+    "type": "two-bedroom ",
+    "rent": 25000,
+    "floor": 6
+  }
+     ]
