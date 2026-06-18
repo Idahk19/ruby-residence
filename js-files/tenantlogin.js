@@ -1,5 +1,6 @@
 import{User} from "./appmethods.js"
 import{UserManager} from "./appmethods.js"
+import{Auth} from "./appmethods.js"
 
 const form = document.getElementById("loginForm");
 const loginError = document.getElementById("loginError");
@@ -30,6 +31,18 @@ form.addEventListener("submit", function (e) {
     const email = emailInput.value.trim();
     const password = passwordInput.value;
 
+     if (Auth.isAdminLogin(email, password))
+     {
+         Auth.login({
+        email: email, 
+        isAdmin: true });
+
+     alert("Admin login successful!"); 
+     window.location.href = "admindashboard.html"; 
+     return;
+     }
+     
+
     
     // find user
     const user = UserManager.getUsers().find(user => user.email === email);
@@ -53,6 +66,7 @@ form.addEventListener("submit", function (e) {
 
     alert("Login successful!");
     window.location.href = "tenantdashboard.html";
+
 
     form.reset();
 });
