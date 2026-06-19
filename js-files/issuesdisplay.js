@@ -31,6 +31,15 @@ function displayIssues() {
                 <td class="p-3">${issue.subject}</td>
                 <td class="p-3">${issue.message}</td>
                 <td class="p-3">${issue.date}</td>
+
+                <td class="p-2">
+                    <button class="deleteBtn bg-red-500 text-white px-2 py-1 rounded"
+                        data-id="${issue.id}">
+                        Reply
+                    </button>
+                </td>
+               
+
             </tr>
         `;
     });

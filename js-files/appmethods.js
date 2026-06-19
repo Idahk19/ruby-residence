@@ -131,10 +131,10 @@ export class Issue {
         this.fullname = fullname;
         this.email = email;
         this.houseNumber = houseNumber;
-        this.subject = date;
+        this.date = date;
         this.subject = subject;
         this.message = message;
-        this.createdAt = new Date().toISOString();
+       
     }
 }
 export class IssueManager {
