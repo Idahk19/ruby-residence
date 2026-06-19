@@ -10,7 +10,7 @@ document.getElementById("totalTenants").textContent = totalTenants;
 
 
 
-const form = document.getElementById("billForm");
+const form = document.getElementById("billsForm");
 const addBillbtn = document.getElementById("addBillBtn");
 
 addBillBtn.addEventListener("click", function (e) {
@@ -44,7 +44,7 @@ addBillBtn.addEventListener("click", function (e) {
 
     form.reset();
 });
-const noticeform = document.getElementById("noticeForm");
+const noticeform = document.getElementById("noticesForm");
 const postNoticeBtn = document.getElementById("postNoticeBtn");
 
 
@@ -70,7 +70,7 @@ postNoticeBtn.addEventListener("click", function (e) {
 
     alert("Notice added successfully!");
 
-    form.reset();
+    noticeform.reset();
 });
 async function loadStatistics() {
         //total houses
