@@ -126,11 +126,12 @@ export class ManageNotices{
     
 }
 export class Issue {
-    constructor(fullname, email, houseNumber, subject, message) {
+    constructor(fullname, email, houseNumber, date, subject, message) {
         this.id = Date.now();
         this.fullname = fullname;
         this.email = email;
         this.houseNumber = houseNumber;
+        this.subject = date;
         this.subject = subject;
         this.message = message;
         this.createdAt = new Date().toISOString();
@@ -151,5 +152,5 @@ export class IssueManager {
         issues.push(issue);
         this.saveIssues(issues);
     }
-    
+
 }

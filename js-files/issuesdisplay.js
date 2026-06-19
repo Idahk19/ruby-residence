@@ -30,6 +30,7 @@ function displayIssues() {
                 <td class="p-3">${issue.houseNumber}</td>
                 <td class="p-3">${issue.subject}</td>
                 <td class="p-3">${issue.message}</td>
+                <td class="p-3">${issue.date}</td>
             </tr>
         `;
     });

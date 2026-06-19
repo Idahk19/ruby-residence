@@ -9,7 +9,7 @@
 <script src="https://kit.fontawesome.com/3f286a15d5.js"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 min-h-screen">
    <header class="bg-red-900 text-white p-4 relative flex items-center">
 
   <!-- MENU BUTTON -->
@@ -52,28 +52,29 @@ class="fixed  w-64 h-screen bg-red-950  text-white p-6 transform -translate-x-fu
 </nav>
 
 </aside>
-<div class="overflow-x-auto bg-white shadow rounded-lg">
+<main class="flex-1 p-4 md:p-6 overflow-x-auto w-full">
 
-  <table class="min-w-[900px] w-full text-sm text-left border-collapse">
+  <div class="bg-white shadow rounded-lg w-full overflow-x-auto">
 
-    <!-- HEADER -->
-    <thead class="bg-red-900 text-white">
-      <tr>
-        <th class="p-3">Full Name</th>
-        <th class="p-3">Email</th>
-        <th class="p-3">House Number</th>
-        <th class="p-3">Subject</th>
-        <th class="p-3">Message</th>
-        <th class="p-3">Date</th>
-      </tr>
-    </thead>
+    <table class="min-w-[900px] w-full text-sm text-left border-collapse">
 
-    <!-- BODY -->
-    <tbody id="issuesTableBody">
-      <!-- JS will inject rows here -->
-    </tbody>
+      <!-- HEADER -->
+      <thead class="bg-red-900 text-white">
+        <tr>
+          <th class="p-3">Full Name</th>
+          <th class="p-3">Email</th>
+          <th class="p-3">House Number</th>
+          <th class="p-3">Subject</th>
+          <th class="p-3">Message</th>
+          <th class="p-3">Date</th>
+        </tr>
+      </thead>
 
-  </table>
+      <tbody id="issuesTableBody"></tbody>
+
+    </table>
+
+  </div>
 
 </div>
 
@@ -96,5 +97,6 @@ overlay.addEventListener("click", toggleMenu);
 </script>
 
 <script type="module" src="js-files/issuesdisplay.js"></script>
+</main>
 </body>
 </html>

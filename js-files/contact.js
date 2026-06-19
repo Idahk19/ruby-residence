@@ -8,10 +8,11 @@ form.addEventListener("submit", function (e) {
     const fullname = document.getElementById("fName").value.trim();
     const email = document.getElementById("email").value.trim();
     const houseNumber = document.getElementById("houseNumber").value.trim();
+    const date = document.getElementById("date").value.trim();
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    if (!fullname || !email || !houseNumber || !subject || !message) {
+    if (!fullname || !email || !houseNumber || !subject || !message ||!date) {
         alert("Please fill all fields");
         return;
     }
@@ -20,6 +21,7 @@ form.addEventListener("submit", function (e) {
         fullname,
         email,
         houseNumber,
+        date,
         subject,
         message
     );
