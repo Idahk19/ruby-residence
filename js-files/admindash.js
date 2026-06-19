@@ -74,3 +74,30 @@ postNoticeBtn.addEventListener("click", function (e) {
 
     form.reset();
 });
+async function totalHouses() {
+    try{
+        const response = await fetch("./js-files/houses.json");
+        const houses = await response.json()
+        
+        document.getElementById("totalHouses").textContent=houses.length;
+       
+    } catch(error){
+        console.error("Failed to load houses", error);
+    }
+    
+}
+totalHouses()
+
+function occupiedHouses(){
+
+const user = JSON.parse(localStorage.getItem("")) || [];
+
+const occupiedSet = new Set( // removes duplicate, ensures all houses are counted
+    users.map(user => user.housenumber)
+);
+
+const occupiedHouses = occupiedSet.size;
+document.getElementById("occupiedUnits").textContent=occupiedHouses;
+
+}
+occupiedHouses()
