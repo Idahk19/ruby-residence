@@ -47,7 +47,7 @@
 
     <h2 class="font-bold text-center text-2xl" >Submit your issues</h2>
     <br>
-    <form class="space-y-4" id="issuesform">
+    <form class="space-y-4" id="issuesForm">
      
         <div >
             <label class="blocktext-md font-semibold mb-1">Full Name:</label>
@@ -74,10 +74,13 @@
             <textarea rows="4" id="message" class="w-full p-3 rounded border border-gray-300" placeholder="Write your message..."></textarea>
         </div> <br>
 
-      <a href="index.html"
-   class="block bg-red-900 text-white px-6 py-3 rounded hover:bg-red-800 w-full text-center ">
-   Send Message
-</a>
+     <button
+  type="submit"
+  id="issuesBtn"
+  class="block bg-red-900 text-white px-6 py-3 rounded hover:bg-red-800 w-full text-center">
+  Send Message
+</button>
+
     </div>
     </form> 
     <br>
@@ -85,5 +88,6 @@
     </div>
     </fieldset>
     </main>
+    <script type="module" src="js-files/contact.js"></script>
     </body>
     </html>

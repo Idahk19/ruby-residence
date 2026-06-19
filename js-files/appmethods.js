@@ -136,3 +136,19 @@ export class Issue {
         this.createdAt = new Date().toISOString();
     }
 }
+export class IssueManager {
+
+    static getIssues() {
+        return JSON.parse(localStorage.getItem("issues")) || [];
+    }
+
+    static saveIssues(issues) {
+        localStorage.setItem("issues", JSON.stringify(issues));
+    }
+
+    static addIssue(issue) {
+        const issues = this.getIssues();
+        issues.push(issue);
+        this.saveIssues(issues);
+    }
+}
