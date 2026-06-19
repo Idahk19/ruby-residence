@@ -19,8 +19,8 @@ showPassword.addEventListener("click", function (e) {
 
     passwordInput.type = isHidden ? "text":"password";
 
-    if (confirmPasswordInput) {
-        confirmPasswordInput.type = isHidden ? "text" : "password";
+    if (passwordInput) {
+        passwordInput.type = isHidden ? "text" : "password";
     }
 });
 
@@ -57,11 +57,17 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
-    if (rememberMe?.checked){
-        localStorage.setItem("currentUser", JSON.stringify(user));
-    } else {
-        sessionStorage.setItem("currentUser", JSON.stringify(user));
+      // decide storage based on remember me
+    const storage = rememberMe.checked ? localStorage : sessionStorage;
 
+    // save user
+    storage.setItem("currentUser", JSON.stringify(user));
+
+    // optional cleanup (prevents conflicts)
+    if (rememberMe.checked) {
+        sessionStorage.removeItem("currentUser");
+    } else {
+        localStorage.removeItem("currentUser");
     }
 
     alert("Login successful!");

@@ -1,3 +1,5 @@
+import{Auth} from "./appmethods.js"
+
 // pull data from the localstorage
 const currentUser = 
     JSON.parse(localStorage.getItem("currentUser")) ||
@@ -5,12 +7,27 @@ const currentUser =
 
 // protect the dashboard
 if(!currentUser){
-    window.location.href = "tenantlogin.html"
+    window.location.href = "login.html"
+
 }
-document.getElementById("welcomeUser").textContent =
-`Welcome, ${currentUser.fullname}`
-document.getElementById("userEmail").textContent =
-` Email: ${currentUser.email}`
-document.getElementById("userHouse").textContent =
-`House Number ${currentUser.housenumber}`
+if (currentUser.isAdmin) {
+    document.getElementById("welcomeUser").textContent =
+        `Welcome, Admin`;
+
+    document.getElementById("userEmail").textContent =
+        `Email: ${currentUser.email}`;
+
+    document.getElementById("userHouse").textContent =
+        `House Number: N/A`;
+
+} else {
+    document.getElementById("welcomeUser").textContent =
+        `Welcome, ${currentUser.fullname}`;
+
+    document.getElementById("userEmail").textContent =
+        `Email: ${currentUser.email}`;
+
+    document.getElementById("userHouse").textContent =
+        `House Number: ${currentUser.housenumber}`;
+}
 
