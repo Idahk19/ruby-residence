@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <script src="https://kit.fontawesome.com/3f286a15d5.js"></script>
      <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
@@ -71,19 +72,31 @@
                     Create Password:
                 </label>
 
-                <input 
-                    type="password" 
-                    name="password"
-                    placeholder="********"
-                    class="border border-gray-300 p-3 rounded-xl "
-                    id="password"
-                >
-                <label class="flex items-center gap-2">
-                <input type="checkbox" id="showPassword">
-                  Show Password
-                </label>
+                
 
-            </div>
+   
+
+    <!-- wrapper -->
+    <div class="relative">
+
+        <input 
+            type="password" 
+            name="password"
+            placeholder="********"
+            class="border border-gray-300 p-3 rounded-xl w-full pr-10"
+            id="password"
+        >
+
+        <!-- eye icon -->
+        <span 
+            id="showPassword"
+            class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600"
+        >
+            <i class="fa-solid fa-eye"></i>
+        </span>
+
+    </div>
+
 
             <!-- Repeat Password -->
             <div class="flex flex-col">
@@ -92,14 +105,27 @@
                     Repeat Password:
                 </label>
 
-                <input 
-                    type="password" 
-                    name="confirmpassword"
-                    placeholder="********"
-                    class="border border-gray-300 p-3 rounded-xl "
-                    id="repeatPassword"
-                >
-              
+               <div class="relative">
+
+        <input 
+            type="password" 
+            name="password"
+            placeholder="********"
+            class="border border-gray-300 p-3 rounded-xl w-full pr-10"
+            id="repeatPassword"
+        >
+
+        <!-- eye icon -->
+        <span 
+            id="showPassword"
+            class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600"
+        >
+            <i class="fa-solid fa-eye"></i>
+        </span>
+
+    </div>
+
+
             <small id="passwordError" class="text-red-600"></small>
             </div>
              <p>                 
