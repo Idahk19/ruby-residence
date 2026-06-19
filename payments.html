@@ -54,31 +54,26 @@ Payments Overview
 </h2>
 
 <!-- TABLE WRAPPER -->
-<div class="overflow-x-auto w-full bg-white text:sm rounded-lg shadow">
+<div class="w-full overflow-x-auto border rounded-lg bg-white shadow">
 
-<table class="min-w-[900px] w-full text-sm text-left border">
+  <table class="min-w-[1000px] w-full text-sm text-left border-collapse">
 
-<!-- HEADER -->
-
-<table class="w-full text-sm text-left">
-    <thead>
-        <tr>
-            <th>Tenant</th>
-            <th>House</th>
-            <th>Month</th>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Status</th>
-            <th>Due Date</th>
-            <th>Actions</th>
-        </tr>
+    <thead class="bg-red-900 text-white">
+      <tr>
+        <th class="p-3">Tenant</th>
+        <th class="p-3">House</th>
+        <th class="p-3">Month</th>
+        <th class="p-3">Type</th>
+        <th class="p-3">Amount</th>
+        <th class="p-3">Status</th>
+        <th class="p-3">Due Date</th>
+        <th class="p-3">Actions</th>
+      </tr>
     </thead>
 
-    <tbody id="billsTableBody">
-    </tbody>
+    <tbody id="billsTableBody"></tbody>
 
-
-</table>
+  </table>
 
 </div>
 
@@ -100,6 +95,7 @@ function toggleMenu() {
 menuBtn.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu);
 </script>
+<script type="module" src="js-files/viewbills.js"></script>
 
 </body>
 </html>

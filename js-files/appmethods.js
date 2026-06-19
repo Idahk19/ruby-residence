@@ -55,6 +55,7 @@ export class Auth {
 }
 export class Bill{ 
      constructor(tenantName, houseNumber, month, type, amount, status, dueDate) {
+        this.id = Date.now()+ Math.random();
         this.tenantName = tenantName;
         this.houseNumber = houseNumber;
         this.month = month;
@@ -81,12 +82,26 @@ export class BillManager {
         bills.push(bill);
         this.saveBills(bills);
     }
+    static saveBills(bills) {
+        localStorage.setItem("bills", JSON.stringify(bills));
+    }
 
     static getBillsByHouse(houseNumber) {
         return this.getBills().filter(
             bill => bill.houseNumber === houseNumber
         );
     }
+
+  static deleteBill(id) {
+
+    const bills = this.getBills();
+
+    const updatedBills = bills.filter(
+        bill => String(bill.id) !== String(id)
+    );
+
+    this.saveBills(updatedBills);
+}
 }
 export class Notices{
     constructor(noticeTitle, noticeText){
