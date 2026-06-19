@@ -47,8 +47,6 @@ addBillBtn.addEventListener("click", function (e) {
 const noticeform = document.getElementById("noticeForm");
 const postNoticeBtn = document.getElementById("postNoticeBtn");
 
-console.log(document.getElementById("postNoticeBtn"));
-console.log(document.getElementById("noticeForm"));
 
 postNoticeBtn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -74,30 +72,37 @@ postNoticeBtn.addEventListener("click", function (e) {
 
     form.reset();
 });
-async function totalHouses() {
+async function totalHousesAvailable() {
     try{
         const response = await fetch("./js-files/houses.json");
         const houses = await response.json()
+        const totalHouses = houses.length;
         
-        document.getElementById("totalHouses").textContent=houses.length;
+        document.getElementById("totalHouses").textContent = totalHouses;
        
     } catch(error){
         console.error("Failed to load houses", error);
     }
     
 }
-totalHouses()
+totalHousesAvailable()
 
+//occupied units
 function occupiedHouses(){
 
-const user = JSON.parse(localStorage.getItem("")) || [];
+const users = JSON.parse(localStorage.getItem("users")) || [];
 
 const occupiedSet = new Set( // removes duplicate, ensures all houses are counted
     users.map(user => user.housenumber)
 );
 
-const occupiedHouses = occupiedSet.size;
-document.getElementById("occupiedUnits").textContent=occupiedHouses;
+return occupiedSet.size;
 
 }
-occupiedHouses()
+const occupied = occupiedHouses();
+document.getElementById("occupiedUnits").textContent = occupied;
+
+// vacant houses
+const total = totalHouses;
+const vacantHouses = total - occupied;
+document.getElementById("vacantHouses").textContent = vacantHouses;
