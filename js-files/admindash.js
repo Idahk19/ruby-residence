@@ -72,37 +72,30 @@ postNoticeBtn.addEventListener("click", function (e) {
 
     form.reset();
 });
-async function totalHousesAvailable() {
-    try{
+async function loadStatistics() {
+        //total houses
         const response = await fetch("./js-files/houses.json");
         const houses = await response.json()
         const totalHouses = houses.length;
         
+        // occupiedHouses
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        const occupiedSet = new Set( // removes duplicate, ensures all houses are counted
+            users.map(user => user.housenumber)
+        );
+
+        const occupied = occupiedSet.size; // set is not an array so we use .size
+
+        // vacant houses
+        const total = totalHouses;
+        const vacantHouses = total - occupied;
+
+         // display
+        document.getElementById("vacantHouses").textContent = vacantHouses;
         document.getElementById("totalHouses").textContent = totalHouses;
-       
-    } catch(error){
-        console.error("Failed to load houses", error);
-    }
-    
-}
-totalHousesAvailable()
+        document.getElementById("occupiedUnits").textContent = occupied;
+ } 
+ loadStatistics();
 
-//occupied units
-function occupiedHouses(){
-
-const users = JSON.parse(localStorage.getItem("users")) || [];
-
-const occupiedSet = new Set( // removes duplicate, ensures all houses are counted
-    users.map(user => user.housenumber)
-);
-
-return occupiedSet.size;
-
-}
-const occupied = occupiedHouses();
-document.getElementById("occupiedUnits").textContent = occupied;
-
-// vacant houses
-const total = totalHouses;
-const vacantHouses = total - occupied;
-document.getElementById("vacantHouses").textContent = vacantHouses;
+        
