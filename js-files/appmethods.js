@@ -54,13 +54,14 @@ export class Auth {
     }
 }
 export class Bill{ 
-     constructor(tenantName, houseNumber, month, type, amount, status) {
+     constructor(tenantName, houseNumber, month, type, amount, status, dueDate) {
         this.tenantName = tenantName;
         this.houseNumber = houseNumber;
         this.month = month;
         this.type = type;
         this.amount = amount;
         this.status = status;
+        this.dueDate =  dueDate;
         this.createdAt = new Date().toISOString();
     }
 }

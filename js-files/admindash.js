@@ -13,7 +13,7 @@ document.getElementById("totalTenants").textContent = totalTenants;
 const form = document.getElementById("billsForm");
 const addBillbtn = document.getElementById("addBillBtn");
 
-addBillBtn.addEventListener("click", function (e) {
+addBillbtn.addEventListener("click", function (e) {
     e.preventDefault();
 
     const tenantName = document.getElementById("tenantName").value.trim();
@@ -22,7 +22,9 @@ addBillBtn.addEventListener("click", function (e) {
     const type = document.getElementById("billType").value;
     const amount = document.getElementById("billAmount").value;
     const status = document.getElementById("paymentStatus").value;
-
+    const dueDate = document.getElementById("dueDate").value;
+     
+    console.log("Due Date:", dueDate);
 
     if (!tenantName || !houseNumber || !amount) {
         alert("Please fill all required fields");
@@ -35,8 +37,11 @@ addBillBtn.addEventListener("click", function (e) {
         month,
         type,
         amount,
-        status
+        status,
+        dueDate
+
     );
+     console.log(bill);
 
     BillManager.addBill(bill);
 

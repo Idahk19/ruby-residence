@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+
+   
+
+    <main class="flex justify-center items-center min-h-screen px-4">
+         
+        <fieldset class="bg-gray-100 p-5 rounded-2xl shadow-lg w-full mt-1 max-w-md">
+           
+            <h1 class="text-4xl font-extrabold text-center text-red-900 tracking-wide mb-2">
+                Welcome Back, Admin
+            </h1>
+
+            <p class="text-center text-gray-600 text-sm mb-8">
+                Login to access the admins account
+            </p>
+
+           <form action="admindashboard.html">
+
+            <div class="flex flex-col">
+
+                
+                <label for="email" class="block mb-3 text-md font-bold tracking-wide text-red-900 uppercase"> Email:</label>
+                <input type="email" class="border border-gray-300 p-3 rounded-xl" name="email" required><br><br>
+            </div>
+             
+            <div class="flex flex-col">
+                <label for="password" class="block mb-3 text-md font-bold tracking-wide text-red-900 uppercase"> Password:</label>
+                <input type="password"  placeholder="********" class="border border-gray-300 p-3 rounded-xl" name="password"><br><br>
+            </div>
+               <!-- REMEMBER + FORGOT -->
+                <div class="flex justify-between items-center mb-6">
+
+                    <div class="flex items-center gap-2 text-red-950">
+                        <input type="checkbox" id="remember">
+                        <label for="remember" class=" text-md">
+                            Remember Me
+                        </label>
+                    </div>
+                  
+                    <a href="#" class="text-red-950 text-md hover:underline">
+                        Forgot Password?
+                    </a>
+                       <P>
+
+
+                </div>
+                 <P>
+                   <a href="index.html" class="text-blue-500">
+                   Go back to home
+                   </a>
+                   </P><br>
+               <a href="admindashboard.html">
+                <button 
+                   class=" bg-red-900 w-full text-white p-3 block mx-auto rounded-xl hover:bg-red-700 "
+                >
+                   Login
+                </button>
+                </a>
+                
+                
+                
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>
