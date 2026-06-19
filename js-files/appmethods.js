@@ -151,4 +151,5 @@ export class IssueManager {
         issues.push(issue);
         this.saveIssues(issues);
     }
+    
 }

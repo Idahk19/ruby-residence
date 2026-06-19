@@ -52,18 +52,28 @@ class="fixed  w-64 h-screen bg-red-950  text-white p-6 transform -translate-x-fu
 </nav>
 
 </aside>
-<!-- ISSUE CARD WRAPPER -->
-<div class="space-y-6 mt-4 ml-10 mr-2 ">
+<div class="overflow-x-auto bg-white shadow rounded-lg">
 
-     
+  <table class="min-w-[900px] w-full text-sm text-left border-collapse">
 
-<!-- ISSUE 1 -->
-<div class="bg-white p-5 rounded-lg shadow border-l-4 border-yellow-500">
+    <!-- HEADER -->
+    <thead class="bg-red-900 text-white">
+      <tr>
+        <th class="p-3">Full Name</th>
+        <th class="p-3">Email</th>
+        <th class="p-3">House Number</th>
+        <th class="p-3">Subject</th>
+        <th class="p-3">Message</th>
+        <th class="p-3">Date</th>
+      </tr>
+    </thead>
 
-  <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-    
-   
-</div>
+    <!-- BODY -->
+    <tbody id="issuesTableBody">
+      <!-- JS will inject rows here -->
+    </tbody>
+
+  </table>
 
 </div>
 
@@ -85,6 +95,6 @@ overlay.addEventListener("click", toggleMenu);
 
 </script>
 
-
+<script type="module" src="js-files/issuesdisplay.js"></script>
 </body>
 </html>
