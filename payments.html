@@ -59,180 +59,24 @@ Payments Overview
 <table class="min-w-[900px] w-full text-sm text-left border">
 
 <!-- HEADER -->
-<thead class="bg-red-900 text-white">
-<tr>
-<th class="p-3">Tenant</th>
-<th class="p-3">House</th>
-<th class="p-3">Jan</th>
-<th class="p-3">Feb</th>
-<th class="p-3">Mar</th>
-<th class="p-3">Apr</th>
-<th class="p-3">May</th>
-<th class="p-3 bg-red-800">Total Arrears <br>(Ksh)</th>
-<th class="p-3">Action</th>
-</tr>
-</thead>
 
-<tbody>
+<table class="w-full text-sm text-left">
+    <thead>
+        <tr>
+            <th>Tenant</th>
+            <th>House</th>
+            <th>Month</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
 
-<tr class="border-b bg-gray-50">
-<td class="p-3">Idah Karwitha</td>
-<td class="p-3">B12</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-red-600 font-semibold">Unpaid</td>
-<td class="p-3 font-bold text-red-900">16,300</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
+    <tbody id="billsTableBody">
+    </tbody>
 
-<tr class="border-b">
-<td class="p-3">James Mwangi</td>
-<td class="p-3">A02</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 font-bold text-green-700">0</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b bg-gray-50">
-<td class="p-3">Beatrice Wanjiku</td>
-<td class="p-3">A10</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 font-bold text-green-700">0</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b">
-<td class="p-3">Faith Akinyi</td>
-<td class="p-3">B02</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 font-bold text-green-700">0</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b bg-gray-50">
-<td class="p-3">Leonard Otieno</td>
-<td class="p-3">B10</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 font-bold text-green-700">0</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b">
-<td class="p-3">Peter Kamau</td>
-<td class="p-3">C02</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-red-600 font-semibold">Unpaid</td>
-<td class="p-3 font-bold text-red-700">16,200</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b bg-gray-50">
-<td class="p-3">Cynthia Atieno</td>
-<td class="p-3">C10</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 font-bold text-green-700">0</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b">
-<td class="p-3">David Mutua</td>
-<td class="p-3">D02</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 font-bold text-green-700">0</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b bg-gray-50">
-<td class="p-3">Aisha Mohamed</td>
-<td class="p-3">E02</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-red-600 font-semibold">Unpaid</td>
-<td class="p-3 font-bold text-red-700">17,500</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-<tr class="border-b">
-<td class="p-3">Kevin Ouma</td>
-<td class="p-3">E10</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 text-green-600 font-semibold">Paid</td>
-<td class="p-3 font-bold text-green-700">0</td>
-<td class="p-3">
-<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">
-Edit Bill
-</button>
-</tr>
-
-</tbody>
-
-<tfoot class="bg-red-900 text-white font-bold">
-<tr>
-<td class="p-3" colspan="7">TOTAL COLLECTED</td>
-<td class="p-3">49,800 Ksh</td>
-</tr>
-</tfoot>
 
 </table>
 
