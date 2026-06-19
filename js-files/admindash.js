@@ -41,7 +41,7 @@ addBillbtn.addEventListener("click", function (e) {
         dueDate
 
     );
-     console.log(bill);
+   
 
     BillManager.addBill(bill);
 
