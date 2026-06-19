@@ -1,4 +1,6 @@
 import { UserManager } from "./appmethods.js";
+import { Bill, UserManager } from "./appmethods.js";
+import { BillManager } from "./appmethods.js"; 
 
 const tableBody = document.getElementById("tenantsTableBody");
 
