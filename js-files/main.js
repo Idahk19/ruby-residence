@@ -12,15 +12,15 @@ const showPassword = document.getElementById("showPassword");
 const emailError = document.getElementById("emailError");
 
 // show password 
-showPassword.addEventListener("change", function (e) {
+showPassword.addEventListener("click", function (e) {
     console.log("clicked checkbox");
 
-    if (this.checked) {
-        passwordInput.type = "text";
-        confirmPasswordInput.type = "text";
-    } else {
-        passwordInput.type = "password";
-        confirmPasswordInput.type = "password";
+    const isHidden = passwordInput.type === "password";
+
+    passwordInput.type = isHidden ? "text":"password";
+
+    if (confirmPasswordInput) {
+        confirmPasswordInput.type = isHidden ? "text" : "password";
     }
 });
 
