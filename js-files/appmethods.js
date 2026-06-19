@@ -125,3 +125,14 @@ export class ManageNotices{
     }
     
 }
+export class Issue {
+    constructor(fullname, email, houseNumber, subject, message) {
+        this.id = Date.now();
+        this.fullname = fullname;
+        this.email = email;
+        this.houseNumber = houseNumber;
+        this.subject = subject;
+        this.message = message;
+        this.createdAt = new Date().toISOString();
+    }
+}
