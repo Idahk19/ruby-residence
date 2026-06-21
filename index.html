@@ -14,53 +14,33 @@
 <!-- NAVBAR -->
 <header class="bg-red-900 p-4 relative">
 
-  <nav class="max-w-6xl mx-auto flex justify-between items-center text-white">
-
-    <!-- LOGO -->
-    <h1 class="text-2xl font-bold tracking-widest uppercase">
-      Ruby Residence
-    </h1>
+  <nav class="max-w-6xl mx-auto flex items-center justify-between text-white relative">
 
     <!-- HAMBURGER -->
     <button id="menuBtn" class="md:hidden text-2xl">
-      <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- DESKTOP MENU-->
+    <!-- LOGO -->
+    <h1 class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-2xl font-bold tracking-widest uppercase">
+        Ruby Residence
+    </h1>
+
+    <!-- DESKTOP MENU -->
     <ul class="hidden md:flex gap-6 text-sm items-center">
-      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
-      <li><a href="/html-files/about.html" class="hover:text-yellow-300">About</a></li>
-      <li><a href="/html-files/contact.html" class="hover:text-yellow-300">Contact Us</a></li>
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-300">Contact Us</a></li>
     </ul>
 
-    <!-- LOGIN BUTTONS -->
-
-      <a href="login.html">
-        <button class="bg-white text-black font-semibold px-2 py-2 rounded hover:bg-gray-300">
-         Login
-        </button>
-      </a>
-    </div>
-
-  </nav>
-
-  <!-- MOBILE MENU (TOGGLE) -->
-  <div id="mobileMenu"
-       class="hidden md:hidden flex flex-col gap-4 mt-4 text-white text-sm">
-
-    <a href="index.html" class="hover:text-yellow-300">Home</a>
-    <a href="about.html" class="hover:text-yellow-300">About Us</a>
-    <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-
-   
+    <!-- LOGIN BUTTON -->
     <a href="login.html">
-      <button class="bg-white text-black w-full py-2 rounded hover:bg-gray-300">
-        Tenant Login
-      </button>
+        <button class="bg-white text-black font-semibold px-2 py-2 rounded hover:bg-gray-300">
+            Login
+        </button>
     </a>
 
-  </div>
-
+</nav>
 </header>
 
 <!-- HERO SECTION  -->
