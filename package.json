@@ -4,7 +4,7 @@
   "description": "Rubyresidence is a rental management system designed to streamline communication between tenants and administrators. It allows users to access rent bills, manage room allocations, and receive important apartment notices in a clear and organized interface.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Idahk19/ruby-residence/issues"
   },
