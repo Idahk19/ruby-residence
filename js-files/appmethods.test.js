@@ -64,3 +64,24 @@ test("deletes a bill correctly", () => {
 
     expect(updated.length).toBe(0);
 });
+
+test("deletes an issue correctly", () => {
+
+    const issues = [
+        {
+            id: 1,
+            fullname: "Idah",
+            houseNumber: "B12",
+            subject: "Leakage",
+            message: "Water leaking"
+        }
+    ];
+
+    IssueManager.saveIssues(issues);
+
+    IssueManager.deleteIssue(1);
+
+    const updated = IssueManager.getIssues();
+
+    expect(updated.length).toBe(0);
+});
