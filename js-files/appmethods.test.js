@@ -10,7 +10,7 @@ import {
     IssueManager
 } from "../js-files/appmethods.js";
 
-
+// test for admin authentication
 test("admin login returns true for correct credentials", () => {
 
     const result = Auth.isAdminLogin(
