@@ -10,49 +10,86 @@
 </head>
 
 <body class="bg-gray-100 min-h-screen">
-   <header class="bg-red-900 text-white p-4 relative flex items-center">
 
-  <!-- MENU BUTTON -->
-  <button id="menuBtn" class="md:hidden text-2xl absolute left-4">
+<!-- TOP BAR -->
+<div class=" md:hidden bg-red-900 text-white p-4 flex justify-between items-center">
+
+
+  <button id="menuBtn" class="md:hidden text-2xl">
     <i class="fa-solid fa-bars"></i>
   </button>
 
-  <!-- CENTERED TITLE -->
-  <p class="text-2xl font-bold w-full text-center">
-    Reported Issues
-  </p>
+</div>
 
-</header>
-
-<!-- OVERLAY -->
 <div id="overlay"
-class="hidden fixed inset-0 bg-black bg-opacity-70 z-40"></div>
+class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
+</div>
 
-<!-- LAYOUT -->
+<!-- PAGE LAYOUT -->
 <div class="flex min-h-screen">
 
-<!-- SIDEBAR -->
-<aside id="sidebar"
-class="fixed  w-64 h-screen bg-red-950  text-white p-6 transform -translate-x-full md:translate-x-0 md:static transition duration-300 z-50">
+  <!-- SIDEBAR -->
+  <aside id="sidebar"
+  class="fixed  w-64 h-screen bg-red-950 text-white p-6 space-y-6 transform -translate-x-full md:translate-x-0 md:static md:block transition duration-300 z-50">
 
-<h2 class="text-2xl font-bold mb-8">Admin Menu</h2>
+    <h2 class="text-2xl font-bold">
+      Admin Menu
+    </h2>
 
-<nav class="space-y-4 text-sm">
+    <nav class="space-y-4 text-sm">
 
-<a href="admindashboard.html" class="block hover:text-yellow-300">Dashboard</a>
+       <a href="index.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-house mr-2"></i>
+           Home
+        </a>
+    
+           <a href="admindashboard.html" class="block hover:text-yellow-300">
+            <i class="fa-solid fa-circle-exclamation mr-2"></i>
+            Post notice
+          </a>
+  
 
-<a href="tenants.html" class="block hover:text-yellow-300 font-semibold">Tenants</a>
+        <a href="admindashboard.html" class="block hover:text-yellow-300">
+          <i class="fa-solid fa-money-bill mr-2"></i>
+            Add bills
+          </a>
+        
 
-<a href="payments.html" class="block hover:text-yellow-300">Payments</a>
+      <a href="admindashboard.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-gauge mr-2"></i>
+        Dashboard
+      </a>
 
-<a href="reported_issues.html" class="block hover:text-yellow-300">Reported Issues</a>
+      <a href="tenants.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-users mr-2"></i>
+        Tenants
+      </a>
 
-<a href="index.html" class="block hover:text-yellow-300 mt-6">Logout</a>
+      <a href="payments.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-money-bill mr-2"></i>
+        Payments
+      </a>
 
-</nav>
+      <a href="adminissues.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-screwdriver-wrench mr-2"></i>
+        Reported Issues
+      </a>
 
-</aside>
-<main class="flex-1 p-4 md:p-6 overflow-x-auto w-full">
+      <a href="index.html" class="block hover:text-yellow-300 mt-6">
+        Logout
+      </a>
+    </nav>
+
+  </aside>
+
+
+<!-- CONTENT -->
+<main class="flex-1 p-6 space-y-6 w-full overflow-y-auto">
+
+<h2 class="text-3xl font-bold text-red-900">
+Reported Issues
+</h2>
+
 
   <div class="bg-white shadow rounded-lg w-full overflow-x-auto">
 
