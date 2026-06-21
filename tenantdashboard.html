@@ -11,102 +11,121 @@
 
 <body class="bg-gray-100">
 
-<!-- TOP NAVBAR (PUBLIC) -->
-<header class="bg-red-900 text-white">
-<nav class="bg-red-900 text-white">
-
-  <div class="max-w-3xl mx-auto p-2">
-
-    <!-- WELCOME -->
-   <h2 id="welcomeUser"></h2>
-   <p id="userEmail"></p>
-   <p id="userHouse"></p>
-
-
-  </div>
-
-</nav>
-
+<!-- HEADER -->
+<header class="bg-red-900 text-white p-4">
+    <h1 class="text-xl font-bold text-center">
+        Ruby Residence 
+    </h1>
 </header>
 
 <!-- MOBILE TOP BAR -->
 <div class="md:hidden bg-red-900 text-white flex justify-between items-center p-4">
     <button id="menuBtn" class="text-2xl">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-
+        <i class="fa-solid fa-bars"></i>
+    </button>
 </div>
-<!-- DASHBOARD LAYOUT -->
+
+<!-- OVERLAY -->
+<div id="overlay"
+class="hidden fixed inset-0 bg-black bg-opacity-70 z-40"></div>
+
+<!-- MAIN LAYOUT -->
 <div class="flex flex-col md:flex-row min-h-screen">
 
-  <!-- SIDEBAR (TENANT MENU) -->
+<!-- SIDEBAR -->
 <aside id="sidebar"
-  class="fixed w-64 h-full bg-red-950 text-white p-6 space-y-6  bg-black/50 z-40 transform -translate-x-full md:translate-x-0 md:static md:h-auto transition duration-300 ">
+class="fixed w-64 h-full bg-gradient-to-b from-red-950 to-red-900 text-white p-6
+space-y-6 transform -translate-x-full md:translate-x-0 md:static
+transition duration-300 z-50 shadow-xl">
 
-    <h2 class="text-xl font-bold">Idah's Menu</h2>
+   
 
-    <nav class="space-y-4 text-sm">
-       <a href="index.html" class="hover:text-yellow-300">Home</a>
-      
-      <a href="contact.html" class="hover:text-yellow-300">Report Issues</a>
+    <!-- MENU -->
+    <nav class="space-y-2 text-sm">
+
+        <a href="index.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a href="contact.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-message"></i> Report Issues
+        </a>
+
+        <a href="notices.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-bullhorn"></i> Notices
+        </a>
+
+        <a href="reported_issues.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-triangle-exclamation"></i> Issues
+        </a>
 
 
-      <a href="#dashboard" class="block hover:text-yellow-300">
-        <i class="fa-solid fa-gauge mr-2"></i> Dashboard
-      </a>
-
-      <a href="notices.html" class="block hover:text-yellow-300">
-        <i class="fa-solid fa-bullhorn mr-2"></i> Notices
-      </a>
-
-      <a href="reported_issues.html" class="block hover:text-yellow-300">
-        <i class="fa-solid fa-triangle-exclamation mr-2"></i> Reported Issues
-      </a>
-
-      <a href="index.html" class="block hover:text-yellow-300 mt-6">
-        Logout
-      </a>
+        <a href="index.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-700 text-red-200">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </a>
 
     </nav>
 
-  </aside>
+</aside>
+<!-- MAIN CONTENT -->
+<main class="flex-1 p-6 space-y-8">
 
+    <!-- TENANT PROFILE CARD -->
+    <div class="bg-white rounded-xl shadow p-6 border-l-4 border-red-900">
 
-  <!-- MAIN CONTENT -->
-  <main class="flex-1 p-8 space-y-10">
-<!-- DASHBOARD -->
-<section id="dashboard" class="bg-white p-6 rounded-lg shadow">
+        <h2 id="welcomeUser"
+            class="text-2xl font-bold text-red-900">
+        </h2>
 
-  <h2 class="text-2xl font-bold text-red-900">
-    Tenant Monthly Bills
-  </h2>
+        <div class="mt-3 space-y-2 text-gray-600">
+            <p id="userEmail"></p>
+            <p id="userHouse"></p>
+        </div>
 
-  <p class="text-gray-600 mt-2 mb-6">
-    Overview of rent and utility payments for this month
-  </p>
+    </div>
 
-  
- <table class="w-full text-sm text-left border-collapse">
-    <thead class="bg-red-900 text-white">
-        <tr>
-            <th class="p-3">Type</th>
-            <th class="p-3">Amount</th>
-            <th class="p-3">Status</th>
-            <th class="p-3">Due Date</th>
-        </tr>
-    </thead>
+    <!-- BILL SECTION -->
+    <section class="bg-white p-6 rounded-lg shadow">
 
-    <tbody id="tenantBillsBody">
-    </tbody>
-</table>
-</section>
+        <h2 class="text-2xl font-bold text-red-900 mb-4">
+            Tenant Monthly Bills
+        </h2>
 
-  </main>
+        <p class="text-gray-600 mb-4">
+            Overview of rent and utility payments for this month
+        </p>
+
+        <div class="overflow-x-auto">
+            <table class="w-full min-w-[600px] text-sm text-left border-collapse">
+
+                <thead class="bg-red-900 text-white">
+                    <tr>
+                        <th class="p-3">Type</th>
+                        <th class="p-3">Amount</th>
+                        <th class="p-3">Status</th>
+                        <th class="p-3">Due Date</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tenantBillsBody"></tbody>
+
+            </table>
+        </div>
+
+    </section>
+
+</main>
 
 </div>
+
 <!-- SCRIPT -->
 <script>
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     const menuBtn = document.getElementById("menuBtn");
     const sidebar = document.getElementById("sidebar");
@@ -122,7 +141,8 @@
 
 });
 </script>
-<script type="module"    src="js-files/tenantdash.js"></script>
-</body>
 
+<script type="module" src="js-files/tenantdash.js"></script>
+
+</body>
 </html>
