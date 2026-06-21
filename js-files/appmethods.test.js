@@ -100,8 +100,7 @@ test("filters bills by house number correctly", () => {
     expect(result.length).toBe(1);
     expect(result[0].houseNumber).toBe("B12");
     });
-    import { UserManager } from "../js-files/appmethods.js";
-
+  
 test("returns true when email already exists", () => {
 
     const users = [
@@ -115,9 +114,9 @@ test("returns true when email already exists", () => {
 
     UserManager.saveUsers(users);
 
-    const result = UserManager.emailExists(
+    const emailResult = UserManager.emailExists(
         "idahkarwitha9@gmail.com"
     );
 
-    expect(result).toBe(true);
+    expect(emailResult).toBe(true);
 });
