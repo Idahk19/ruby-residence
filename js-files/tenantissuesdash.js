@@ -49,10 +49,9 @@ function displayIssues() {
                     <button  <button onclick="deleteIssue('${issue.id}')"
                      class="deleteBtn bg-red-500 text-white px-2 py-1 rounded"
                         data-id="${issue.id}">
-                        delete
+                        Delete
                     </button>
-                </td>
-                <td class="p-2">
+    
                     <button  <button onclick="editIssue('${issue.id}')"
                      class="editBtn bg-red-500 text-white px-2 py-1 rounded"
                         data-id="${issue.id}">
