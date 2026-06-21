@@ -52,20 +52,45 @@ git clone https://github.com/Idahk19/rubyresidence.git
 ```
 ## Project Structure
 ```
-rubyresidence/
+ruby-residence/
 │
-├── index.html
-├── about.html
-├── contact.html
-├── tenantdashboard.html
-├── admindashboard.html
-├── payments.html
-├── tenants.html
-├── reported_issues.html
+│   ├── index.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── tenantdashboard.html
+│   ├── admindashboard.html
+│   ├── notices.html
+│   ├── payments.html
+│   ├── reported_issues.html
+│   └── contact.html
+│
+├── css/
+│   ├── style.css
+│   └── dashboard.css
+│
+├── js-files/
+│   ├── appmethods.js
+│   ├── login.js
+│   ├── signup.js
+│   ├── bills.js
+│   ├── notices.js
+│   └── issues.js
+│
 ├── assets/
-│ ├── css/
-│ ├── js/
-│ └── images/
+│   └── images/
+│       ├── home.png
+│       ├── admindash.png
+│       └── tenantdash.png
+│
+├── tests/
+│   ├── auth.test.js
+│   ├── billManager.test.js
+│   ├── issueManager.test.js
+│   └── userManager.test.js
+│
+├── package.json
+├── package-lock.json
+├── .gitignore
 └── README.md
 ```
 
