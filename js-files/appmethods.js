@@ -82,6 +82,16 @@ export class BillManager {
         bills.push(bill);
         this.saveBills(bills);
     }
+    static editBill(id, updatedBill) {
+
+        const bills = this.getBills();
+
+        const updatedBills = bills.map(bill =>
+           bill.id == id ? updatedBill : bill
+    );
+
+    this.saveBills(updatedBills);
+    }
     static saveBills(bills) {
         localStorage.setItem("bills", JSON.stringify(bills));
     }

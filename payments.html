@@ -21,30 +21,67 @@
 
 </div>
 
-<!-- OVERLAY -->
-<div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-70 z-40"></div>
+<div id="overlay"
+class="hidden fixed inset-0 bg-black bg-opacity-70 z-40">
+</div>
 
-<!-- MAIN LAYOUT -->
-<div class="flex flex-col md:flex-row min-h-screen">
+<!-- PAGE LAYOUT -->
+<div class="flex min-h-screen">
 
-<!-- SIDEBAR -->
-<aside id="sidebar"
-class="fixed w-64 h-screen bg-red-950 text-white p-6 
-transform -translate-x-full md:translate-x-0 md:static 
-transition duration-300 z-50 overflow-y-auto">
+  <!-- SIDEBAR -->
+  <aside id="sidebar"
+  class="fixed  w-64 h-screen bg-red-950 text-white p-6 space-y-6 transform -translate-x-full md:translate-x-0 md:static md:block transition duration-300 z-50">
 
-<h2 class="text-2xl font-bold mb-8">Admin Menu</h2>
+    <h2 class="text-2xl font-bold">
+      Admin Menu
+    </h2>
 
-<nav class="space-y-4 text-sm">
+    <nav class="space-y-4 text-sm">
 
-<a href="admindashboard.html" class="block hover:text-yellow-300">Dashboard</a>
-<a href="tenants.html" class="block hover:text-yellow-300">Tenants</a>
-<a href="payments.html" class="block hover:text-yellow-300 font-semibold">Payments</a>
-<a href="adminissues.html" class="block hover:text-yellow-300">Reported Issues</a>
-<a href="index.html" class="block hover:text-yellow-300 mt-6">Logout</a>
+       <a href="index.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-house mr-2"></i>
+           Home
+        </a>
+    
+           <a href="admindashboard.html" class="block hover:text-yellow-300">
+            <i class="fa-solid fa-circle-exclamation mr-2"></i>
+            Post notice
+          </a>
+  
 
-</nav>
-</aside>
+        <a href="admindashboard.html" class="block hover:text-yellow-300">
+          <i class="fa-solid fa-money-bill mr-2"></i>
+            Add bills
+          </a>
+        
+
+      <a href="admindashboard.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-gauge mr-2"></i>
+        Dashboard
+      </a>
+
+      <a href="tenants.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-users mr-2"></i>
+        Tenants
+      </a>
+
+      <a href="payments.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-money-bill mr-2"></i>
+        Payments
+      </a>
+
+      <a href="adminissues.html" class="block hover:text-yellow-300">
+        <i class="fa-solid fa-screwdriver-wrench mr-2"></i>
+        Reported Issues
+      </a>
+
+      <a href="index.html" class="block hover:text-yellow-300 mt-6">
+        Logout
+      </a>
+    </nav>
+
+  </aside>
+
 
 <!-- CONTENT -->
 <main class="flex-1 p-6 space-y-6 w-full overflow-y-auto">
