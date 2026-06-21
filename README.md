@@ -64,30 +64,27 @@ ruby-residence/
 │   ├── reported_issues.html
 │   └── contact.html
 │
-├── css/
-│   ├── style.css
-│   └── dashboard.css
-│
 ├── js-files/
 │   ├── appmethods.js
+│   ├── appmethods.test.js
 │   ├── login.js
 │   ├── signup.js
-│   ├── bills.js
+│   ├── viewbills.js
 │   ├── notices.js
+│   ├── tenantdash.js
+│   ├── tenantdisplay.js
+│   ├── tenantissuesdash.js
 │   └── issues.js
 │
 ├── assets/
 │   └── images/
 │       ├── home.png
 │       ├── admindash.png
+│       ├── apartment.jpg
+│       ├── staircase.jpg
 │       └── tenantdash.png
 │
-├── tests/
-│   ├── auth.test.js
-│   ├── billManager.test.js
-│   ├── issueManager.test.js
-│   └── userManager.test.js
-│
+├── houses.json
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
