@@ -85,3 +85,18 @@ test("deletes an issue correctly", () => {
 
     expect(updated.length).toBe(0);
 });
+
+test("filters bills by house number correctly", () => {
+
+    const bills = [
+        { id: 1, houseNumber: "B12", amount: 15000 },
+        { id: 2, houseNumber: "B13", amount: 10000 }
+    ];
+
+    BillManager.saveBills(bills);
+
+    const result = BillManager.getBillsByHouse("B12");
+
+    expect(result.length).toBe(1);
+    expect(result[0].houseNumber).toBe("B12");
+    });
