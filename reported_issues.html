@@ -10,75 +10,67 @@
 </head>
 
 <body class="bg-gray-100">
-
-
-
-<header class="bg-red-900 text-white">
-<nav class="bg-red-900 text-white">
-
-  <div class="max-w-3xl mx-auto p-2">
-
-    <!-- WELCOME -->
-    <p class="text-lg font-bold text-center">
-      
-    </p>
-
-    <!-- NAV LINKS -->
-    <ul class="flex justify-center gap-6 text-md mt-3">
-
-      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
-      <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
-      <li><a href="contact.html" class="hover:text-yellow-300">Report Issues</a></li>
-
-    </ul>
-
-  </div>
-
-</nav>
-
+<header class="bg-red-900 text-white p-4">
+    <h1 class="text-xl font-bold text-center">
+        Ruby Residence 
+    </h1>
 </header>
 
 <!-- MOBILE TOP BAR -->
 <div class="md:hidden bg-red-900 text-white flex justify-between items-center p-4">
-  
-
-  <button id="menuBtn" class="text-2xl">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-
+    <button id="menuBtn" class="text-2xl">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 </div>
 
-<!-- OVERLAY BACKDROP -->
-<div id="overlay" class="hidden ">
+<!-- OVERLAY -->
+<div id="overlay"
+class="hidden fixed inset-0 bg-black bg-opacity-70 z-40"></div>
+
+<!-- MAIN LAYOUT -->
+<div class="flex flex-col md:flex-row min-h-screen">
 
 <!-- SIDEBAR -->
 <aside id="sidebar"
-  class="fixed  w-64 h-full bg-red-950 text-white p-6 space-y-6 transform -translate-x-full md:translate-x-0 md:static md:h-auto transition duration-300 ">
+class="fixed w-64 h-full bg-gradient-to-b from-red-950 to-red-900 text-white p-6
+space-y-6 transform -translate-x-full md:translate-x-0 md:static
+transition duration-300 z-50 shadow-xl">
 
-  <h2 class="text-xl font-bold">Idah's Menu</h2>
+   
 
-  <nav class="space-y-4 text-sm">
+    <!-- MENU -->
+    <nav class="space-y-2 text-sm">
 
-    <a href="./tenantdashboard.html" class="block hover:text-yellow-300">
-      <i class="fa-solid fa-gauge mr-2"></i> Dashboard
-    </a>
+        <a href="index.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
 
-    <a href="notices.html" class="block hover:text-yellow-300">
-      <i class="fa-solid fa-bullhorn mr-2"></i> Notices
-    </a>
+        <a href="contact.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-message"></i> Report Issues
+        </a>
 
-    <a href="adminissues.html" class="block hover:text-yellow-300">
-      <i class="fa-solid fa-triangle-exclamation mr-2"></i> Reported Issues
-    </a>
+        <a href="notices.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-bullhorn"></i> Notices
+        </a>
 
-    <a href="index.html" class="block hover:text-yellow-300 mt-6">
-      Logout
-    </a>
+        <a href="reported_issues.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-800 transition">
+            <i class="fa-solid fa-triangle-exclamation"></i> Issues
+        </a>
 
-  </nav>
+
+        <a href="index.html"
+           class="flex items-center gap-3 p-3 rounded-lg hover:bg-red-700 text-red-200">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </a>
+
+    </nav>
 
 </aside>
-</div>
+
 
 <!-- MAIN CONTENT -->
 <main class="flex-1 p-6 space-y-6">
