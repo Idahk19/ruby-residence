@@ -162,6 +162,25 @@ export class IssueManager {
         issues.push(issue);
         this.saveIssues(issues);
     }
+    static deleteIssue(id) {
+
+        const issues = this.getIssues();
+
+        const updatedIssues = issues.filter(issue => issue.id != id);
+
+        this.saveIssues(updatedIssues);
+    }
+
+    static editIssue(id, updatedData) {
+
+        const issues = this.getIssues();
+
+        const updatedIssues = issues.map(issue =>
+            issue.id == id ? updatedData : issue
+        );
+
+        this.saveIssues(updatedIssues);
+    }
     static replyToIssue(id, replyMessage) {
 
         const issues = this.getIssues();
