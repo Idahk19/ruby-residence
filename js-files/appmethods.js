@@ -102,7 +102,7 @@ export class BillManager {
         );
     }
 
-  static deleteBill(id) {
+    static deleteBill(id) {
 
     const bills = this.getBills();
 
@@ -162,5 +162,23 @@ export class IssueManager {
         issues.push(issue);
         this.saveIssues(issues);
     }
+    static replyToIssue(id, replyMessage) {
+
+        const issues = this.getIssues();
+
+        const updatedIssues = issues.map(issue => {
+
+        if (issue.id == id) {
+            return {
+                ...issue,
+                reply: replyMessage
+            };
+        }
+
+        return issue;
+        });
+
+       this.saveIssues(updatedIssues);
+       }
 
 }
