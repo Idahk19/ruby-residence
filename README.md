@@ -32,9 +32,12 @@ The interface is designed with a modern and professional aesthetic:
 
 ## Tech Stack
 
-- **Language:** HTML5
-- **Styling:** CSS3 (Flexbox and Grid layout techniques)
-- **Interactivity:** Basic JavaScript (for navigation handling)
+- Language:HTML5
+- Styling: Tailwind CSS 
+- Interactivity: Basic JavaScript (for navigation handling)
+- Vanilla JavaScript for functionality
+- Jest for testing
+- LocalStorage
 
 ## Getting Started
 
@@ -93,6 +96,20 @@ Responsive techniques used include:
 - Mobile-friendly navigation  
 
 ---
+## Testing
+
+This project uses Jest for unit testing.
+
+### What is tested:
+- Authentication logic
+- Bill creation and updates
+- Issue management system
+- Data filtering by user
+
+### Run tests:
+
+```bash
+npm test
 
 
 # Future Improvements
