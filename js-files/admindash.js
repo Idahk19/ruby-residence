@@ -3,18 +3,16 @@ import { BillManager } from "./appmethods.js";
 import { Notices } from "./appmethods.js";
 import { ManageNotices} from "./appmethods.js"; 
 
-const users = UserManager.getUsers();
-const totalTenants = users.length
+const users = UserManager.getUsers(); // get users using the method
+const totalTenants = users.length // get number of users
 
-document.getElementById("totalTenants").textContent = totalTenants;
-
-
+document.getElementById("totalTenants").textContent = totalTenants; // display the number of users on the id
 
 const form = document.getElementById("billsForm");
 const addBillbtn = document.getElementById("addBillBtn");
 
 addBillbtn.addEventListener("click", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // adding bill button
 
     const tenantName = document.getElementById("tenantName").value.trim();
     const houseNumber = document.getElementById("houseNumber").value.trim();
@@ -31,7 +29,7 @@ addBillbtn.addEventListener("click", function (e) {
         return;
     }
 
-    const bill = new Bill(
+    const bill = new Bill( // instance
         tenantName,
         houseNumber,
         month,
@@ -43,7 +41,7 @@ addBillbtn.addEventListener("click", function (e) {
     );
    
 
-    BillManager.addBill(bill);
+    BillManager.addBill(bill); // method
 
     alert("Bill added successfully!");
 
@@ -54,7 +52,7 @@ const postNoticeBtn = document.getElementById("postNoticeBtn");
 
 
 postNoticeBtn.addEventListener("click", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // notice submission
 
     const noticeTitle = document.getElementById("noticeTitle").value.trim();
     const noticeText = document.getElementById("noticeText").value.trim();
@@ -65,20 +63,20 @@ postNoticeBtn.addEventListener("click", function (e) {
         return;
     }
 
-    const notice = new Notices(
-        noticeText,
+    const notice = new Notices( // new instance
+        noticeText, 
         noticeTitle,
        
     );
 
-    ManageNotices.addNotice(notice);
+    ManageNotices.addNotice(notice); // call method
 
     alert("Notice added successfully!");
 
     noticeform.reset();
 });
 async function loadStatistics() {
-        //total houses
+        // fetch total houses
         const response = await fetch("./js-files/houses.json");
         const houses = await response.json()
         const totalHouses = houses.length;

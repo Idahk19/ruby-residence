@@ -57,6 +57,22 @@ form.addEventListener("submit", function (e){
     passwordError.textContent = "Add at least 1 number";
     return;
     }
+   
+
+
+email.addEventListener("input", () => {
+    emailError.textContent = "";
+});
+
+passwordInput.addEventListener("input", () => {
+    passwordError.textContent = "";
+});
+
+confirmPasswordInput.addEventListener("input", () => {
+    passwordError.textContent = "";
+});
+
+
 
 
 

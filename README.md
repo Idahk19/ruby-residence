@@ -48,7 +48,7 @@ The interface is designed with a modern and professional aesthetic:
 Clone the repository:
 
 ```bash
-git clone https://github.com/Idahk19/rubyresidence.git
+git clone https://github.com/Idahk19/rubyresidence
 ```
 ## Project Structure
 ```
