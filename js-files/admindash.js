@@ -77,7 +77,7 @@ postNoticeBtn.addEventListener("click", function (e) {
 });
 async function loadStatistics() {
         // fetch total houses
-        const response = await fetch("./js-files/houses.json");
+        const response = await fetch("./houses.json");
         const houses = await response.json()
         const totalHouses = houses.length;
         
